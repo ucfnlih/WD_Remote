@@ -1,0 +1,23 @@
+project:
+  type: book
+
+book:
+  title: "Wendi's Learning Diary"
+  author: "Wendi Li"
+  date: "2023/1/30"
+  chapters:
+    - index.qmd
+    - intro.qmd
+    - summary.qmd
+    - references.qmd
+
+bibliography: references.bib
+
+format:
+  html:
+    theme: cosmo
+  pdf:
+    documentclass: scrreprt
+
+editor: visual
+
