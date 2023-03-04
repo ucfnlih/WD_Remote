@@ -7,8 +7,12 @@ To learn more about Quarto books visit <https://quarto.org/docs/books>.
 ```{r}
 1 + 1
 
+4+5
+
 ```
 
-::: {#CHUNKNAME layout-ncol="2"}
-![](figure1.png)
+::: {#CHUNKNAME layout-ncol=2}
+
+![figure1.png](figure1.png){#reference)
+
 :::
