@@ -8,4 +8,4 @@ To learn more about Quarto books visit <https://quarto.org/docs/books>.
 1 + 1
 ```
 
-![The rental price (median) increasing rate in short-term market and long-term market](figure1.png){width=500}
+![The rental price (median) increasing rate in short-term market and long-term market](figure1.png)
