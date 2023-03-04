@@ -13,8 +13,6 @@ To learn more about Quarto books visit <https://quarto.org/docs/books>.
 
 ```
 
-::: {#CHUNKNAME layout-ncol=2}
-
-![figure1.png](figure1.png){#reference)
-
+::: {#CHUNKNAME layout-ncol="2"}
+![](figure1.png){#reference)
 :::
