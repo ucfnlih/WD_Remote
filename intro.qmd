@@ -4,6 +4,6 @@ This is a book created from Wendi Li
 
 ::: {#CHUNKNAME layout-ncol="2"}
 
-![](figure1.png){fig-align="center"}
+![](figure1.png)
 
 :::
