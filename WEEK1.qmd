@@ -1,8 +1,6 @@
-# Preface {.unnumbered}
+# WEEK1 {.unnumbered}
 
-This is a Quarto book.
-
-To learn more about Quarto books visit <https://quarto.org/docs/books>.
+What is remote sensing?
 
 ```{r}
 1 + 1
