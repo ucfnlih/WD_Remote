@@ -1,11 +1,11 @@
 # WEEK1
 
-## 1. Summary
+## Summary
 
 Remote sensing is the acquisition of information about an object or phenomenon without making physical contact with the object (from a distance), which is one of the specific methods of Earth observation. Remote sensing is an interesting and useful field with mass of data, it can detect the urban phenomena from a broader perspective and support for policy development. However, satellites also bring space junk. According to statistics, there are [3,000 dead satellites and around 34,000 pieces bigger than 10 centimetres in size littering space](https://www.nhm.ac.uk/discover/what-is-space-junk-and-why-is-it-a-problem.html), which increases the hitting risk.
 
 Remote sensing is achieved through sensors, which can be on satellites or mounted on aircraft. There are two main categories of remote sensors, active sensors and passive sensors. Passive sensors receive and detect electromagnetic waves emitted by the target itself or reflected radiation from nature, with no emission source of its own. While active sensors emit electromagnetic waves to the target, which in turn receives their reflection. Each sensor has its own strengths and weaknesses (Figure 1), and using them in combination typically results in more accurate prediction data.
 
 ::: {#CHUNKNAME layout-ncol="2"}
-<center>![Figrue 1 Two Types Of Sensors](W1_2types.png)source:[EOS Data Analytics](https://eos.com/blog/types-of-remote-sensing/); [GISGeography](https://gisgeography.com/passive-active-sensors-remote-sensing/); [Andrew's Pages](https://andrewmaclachlan.github.io/CASA0023-lecture-1/#23)</center>
+![Figrue 1 Two Types Of Sensors](W1_2types.png)source:[EOS Data Analytics](https://eos.com/blog/types-of-remote-sensing/); [GISGeography](https://gisgeography.com/passive-active-sensors-remote-sensing/); [Andrew's Pages](https://andrewmaclachlan.github.io/CASA0023-lecture-1/#23)
 :::
