@@ -1,6 +1,6 @@
 # Introduction
 
-This is a Quarto book.
+This is Wendi's book
 
 To learn more about Quarto books visit <https://quarto.org/docs/books>.
 
