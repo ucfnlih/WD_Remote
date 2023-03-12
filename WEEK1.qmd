@@ -1,6 +1,4 @@
-# WEEK1 {.unnumbered}
-
-What is remote sensing?
+# WEEK1
 
 ```{r}
 1 + 1
