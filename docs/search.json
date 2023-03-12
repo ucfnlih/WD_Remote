@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Wendi’s Learning Diary",
     "section": "",
-    "text": "Preface\nThis is a Quarto book.\nTo learn more about Quarto books visit https://quarto.org/docs/books.\n\n1 + 1\n\n[1] 2\n\n4+5\n\n[1] 9\n\n5+78\n\n[1] 83\n\n\n\n\n\n{#reference)"
+    "text": "1 Introduction\nThis is a Quarto book.\nTo learn more about Quarto books visit https://quarto.org/docs/books.\n\n1 + 1\n\n[1] 2\n\n4+5\n\n[1] 9\n\n5+78\n\n[1] 83\n\n\n\n\n\n{#reference)"
   },
   {
     "objectID": "intro.html",
