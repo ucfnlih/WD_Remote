@@ -30,8 +30,8 @@
   {
     "objectID": "WEEK1.html#summary",
     "href": "WEEK1.html#summary",
-    "title": "WEEK1",
-    "section": "1. Summary",
-    "text": "1. Summary\nRemote sensing is the acquisition of information about an object or phenomenon without making physical contact with the object (from a distance), which is one of the specific methods of Earth observation. Remote sensing is an interesting and useful field with mass of data, it can detect the urban phenomena from a broader perspective and support for policy development. However,\n\n1 + 1\n\n[1] 2\n\n4+5\n\n[1] 9\n\n5+78\n\n[1] 83\n\n\n\n\n\n{#reference)"
+    "title": "1  WEEK1",
+    "section": "1.1 1. Summary",
+    "text": "1.1 1. Summary\nRemote sensing is the acquisition of information about an object or phenomenon without making physical contact with the object (from a distance), which is one of the specific methods of Earth observation. Remote sensing is an interesting and useful field with mass of data, it can detect the urban phenomena from a broader perspective and support for policy development. However, satellites also bring space junk. According to statistics, there are 3,000 dead satellites and around 34,000 pieces bigger than 10 centimetres in size littering space, which increases the hitting risk.\nRemote sensing is achieved through sensors, which can be on satellites or mounted on aircraft. There are two main categories of remote sensors, active sensors and passive sensors. Passive sensors receive and detect electromagnetic waves emitted by the target itself or reflected radiation from nature, with no emission source of its own. While active sensors emit electromagnetic waves to the target, which in turn receives their reflection. Each sensor has its own strengths and weaknesses (Figure 1), and using them in combination typically results in more accurate prediction data.\n\n\n\n\n\n\nsource:EOS Data Analytics; GISGeography; Andrew’s Pages"
   }
 ]
