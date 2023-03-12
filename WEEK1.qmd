@@ -1,4 +1,6 @@
-# WEEK1
+# Getting star with remote sensing
+
+This week, we have a preliminary understanding of the concept of remote sensing and how it is implemented. This is the basis for starting out interesting journey of remote sensing!
 
 ## Summary
 
@@ -7,7 +9,11 @@ Remote sensing is the acquisition of information about an object or phenomenon w
 Remote sensing is achieved through sensors, which can be on satellites or mounted on aircraft. There are two main categories of remote sensors, active sensors and passive sensors. Passive sensors receive and detect electromagnetic waves emitted by the target itself or reflected radiation from nature, with no emission source of its own. While active sensors emit electromagnetic waves to the target, which in turn receives their reflection. Each sensor has its own strengths and weaknesses (Figure 1), and using them in combination typically results in more accurate prediction data.
 
 ::: {#CHUNKNAME layout-ncol="2"}
-<center>![Figrue 1 Two Types Of Sensors](W1_2types.png)</center>
+<center>![Figrue 1 Two Types Of Sensors](W1_2types.png){width="300"}</center>
 
 source:[EOS Data Analytics](https://eos.com/blog/types-of-remote-sensing/); [GISGeography](https://gisgeography.com/passive-active-sensors-remote-sensing/); [Andrew's Pages](https://andrewmaclachlan.github.io/CASA0023-lecture-1/#23)
 :::
+
+
+
+
