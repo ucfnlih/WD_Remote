@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.269">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>week3</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="WEEK3_files/libs/clipboard/clipboard.min.js"></script>
+<script src="WEEK3_files/libs/quarto-html/quarto.js"></script>
+<script src="WEEK3_files/libs/quarto-html/popper.min.js"></script>
+<script src="WEEK3_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="WEEK3_files/libs/quarto-html/anchor.min.js"></script>
+<link href="WEEK3_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="WEEK3_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="WEEK3_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="WEEK3_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="WEEK3_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="WEEK3_files/libs/quarto-diagram/mermaid.min.js"></script>
+<script src="WEEK3_files/libs/quarto-diagram/mermaid-init.js"></script>
+<link href="WEEK3_files/libs/quarto-diagram/mermaid.css" rel="stylesheet">
+
+
+</head>
+
+<body class="fullcontent">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+
+<main class="content" id="quarto-document-content">
+
+
+
+<section id="correction" class="level1">
+<h1>Correction</h1>
+<section id="geometric-correction" class="level4">
+<h4 class="anchored" data-anchor-id="geometric-correction">Geometric Correction</h4>
+<p><a href="http://www.flexiblepicturesystems.com/technology.html">Geometric correction</a> in remote sensing is the digital process of matching the image projection to a specific projection surface. When remote sensing data is collected, the image will be distorted due to view angle, topography, wind, etc. To deal with the distortion, ground control points (GCP) plays a huge role. <a href="https://medium.com/aerial-acuity/what-are-ground-control-points-gcps-and-how-do-i-use-them-4f4c3771fd0b">Ground control points</a> are large marked targets on the ground, it can help remote sensing instruments to determine the exact geographical location of the image and then determin the geometric transformation coefficients. The linear algorithm is then used t o calculate the positions in the rectified (gold standard) map. Finally, using RMSE to test the error and choose the best model.</p>
+<div class="cell" data-fig-width="8">
+<div class="cell-output-display">
+<div>
+<p>
+</p><pre class="mermaid mermaid-js" data-tooltip-selector="#mermaid-tooltip-1">flowchart LR
+A(Identifying Ground &lt;br/&gt; Control Points) --&gt; B(Getting geometric &lt;br/&gt;transformation &lt;br/&gt; coefficients)
+    B --&gt; C{Linear&lt;br/&gt; algorithm}
+    C --&gt;|Forward| D[Using RMSE to &lt;br/&gt; test the error]
+    C --&gt;|Backward| D[Using RMSE to &lt;br/&gt; test the error]
+
+</pre>
+<div id="mermaid-tooltip-1" class="mermaidTooltip">
+
+</div>
+<p></p>
+</div>
+</div>
+</div>
+<p>Created by: Wendi Li</p>
+</section>
+<section id="orthorectification-correction-topographic-correction" class="level4">
+<h4 class="anchored" data-anchor-id="orthorectification-correction-topographic-correction">Orthorectification correction / Topographic correction</h4>
+<p>When image distortion occurs by sensor orientation, topographical variation and the curvature of the earth, the <a href="https://www.intermap.com/blog/orthorectification-in-a-nutshell">Orthorectification</a> process should be used to correct, which is always called topographic correction. <a href="https://apollomapping.com/blog/g-faq-orthorectification-part/">To orthorectify an image</a>, an elevation model and a rational polynomial coefficients (RPCs) are minimally required, which provide the information of the topography of the ground and the relationship between image and the ground. The accurate elevation model <a href="https://www.intermap.com/blog/orthorectification-in-a-nutshell">calculates the effect of terrain variation on the image pixels</a> and determine the position, which corrects the distortion.</p>
+<center>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="distortion.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Distortion</figcaption><p></p>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="elevation.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Elevation Model</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</center>
+<p>Source:<a href="https://www.intermap.com/blog/orthorectification-in-a-nutshell">Intermap</a></p>
+</section>
+<section id="atmospheric-correction" class="level4">
+<h4 class="anchored" data-anchor-id="atmospheric-correction">Atmospheric Correction</h4>
+<p>In remote sensing detection, electromagnetic waves travel through atmosphere twice creating an adjacency effect, which is the reason for atmospheric correction. <a href="https://www.linkedin.com/pulse/atmospheric-correction-dinesh-shrestha/">Atmospheric correction is mainly divided into relative correction and absolute correction</a>, and they assume that a linear trend is existed for radiance between atmosphere and ground and the atmospheric measurements are available respectively. Dark Object Subtraction (DOS) is the most used methods to correct atmosphere and it is the most simplest one, and absolute correction methods are relatively difficult due to the unavailability of information they need. Empirical line correction is a special method which needs a reference spectrum from field or laboratory and use a linear regression to equate DN and reflectance.In my point of view, it is close to the relative correction method but cannot be fully attributed to it, because it is not exactly corrected by normalization.</p>
+<center>
+<img src="Atmospheric_Correction.png" class="img-fluid" style="width:80.0%">
+</center>
+<p>Created by: Wendi Li</p>
+</section>
+<section id="radiometric-calibration" class="level4">
+<h4 class="anchored" data-anchor-id="radiometric-calibration">Radiometric Calibration</h4>
+</section>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
