@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Wendi’s Learning Diary - 2&nbsp; WEEK1</title>
+<title>Wendi’s Learning Diary - 2&nbsp; Getting star with remote sensing</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -70,7 +70,7 @@ ul.task-list li input[type="checkbox"] {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">WEEK1</span></h1>
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Getting star with remote sensing</span></h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -100,7 +100,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./WEEK1.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">WEEK1</span></a>
+  <a href="./WEEK1.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Getting star with remote sensing</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -136,7 +136,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">WEEK1</span></h1>
+<h1 class="title d-none d-lg-block"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Getting star with remote sensing</span></h1>
 </div>
 
 
@@ -151,14 +151,68 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
+<p>This week, we have a preliminary understanding of the concept of remote sensing and how it is implemented. This is the basis for starting out interesting journey of remote sensing!</p>
 <section id="summary" class="level2" data-number="2.1">
 <h2 data-number="2.1" class="anchored" data-anchor-id="summary"><span class="header-section-number">2.1</span> Summary</h2>
 <p>Remote sensing is the acquisition of information about an object or phenomenon without making physical contact with the object (from a distance), which is one of the specific methods of Earth observation. Remote sensing is an interesting and useful field with mass of data, it can detect the urban phenomena from a broader perspective and support for policy development. However, satellites also bring space junk. According to statistics, there are <a href="https://www.nhm.ac.uk/discover/what-is-space-junk-and-why-is-it-a-problem.html">3,000 dead satellites and around 34,000 pieces bigger than 10 centimetres in size littering space</a>, which increases the hitting risk.</p>
 <p>Remote sensing is achieved through sensors, which can be on satellites or mounted on aircraft. There are two main categories of remote sensors, active sensors and passive sensors. Passive sensors receive and detect electromagnetic waves emitted by the target itself or reflected radiation from nature, with no emission source of its own. While active sensors emit electromagnetic waves to the target, which in turn receives their reflection. Each sensor has its own strengths and weaknesses (Figure 1), and using them in combination typically results in more accurate prediction data.</p>
-<div id="CHUNKNAME" class="quarto-layout-panel">
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="W1_2types.png" class="img-fluid figure-img" style="width:80.0%"></p>
+<p></p><figcaption class="figure-caption">Figrue 1 Two Types Of Sensors</figcaption><p></p>
+</figure>
+</div>
+<p>source:<a href="https://eos.com/blog/types-of-remote-sensing/">EOS Data Analytics</a>; <a href="https://gisgeography.com/passive-active-sensors-remote-sensing/">GISGeography</a>; <a href="https://andrewmaclachlan.github.io/CASA0023-lecture-1/#23">Andrew’s Pages</a></p>
+</center>
+<p>Raster data is the most common remote sensing data format, and its encoding methods mainly includes band interleaved by line (BIL), band sequential (BSQ), band interleaved by pixel (BIP) adn GeoTIFF (most common). To measure the quality and potential detail of imagery, four resolutions are used as metrics:</p>
+<ul>
+<li><p><strong>Spatial Resolution</strong> <br> <em>Size of the raster grid per pixel. Describing how detailed objects are in an image.</em></p></li>
+<li><p><strong>Spectral Resolution</strong><br> <em>Number and size of bands that a remote sensing platform can capture</em></p>
+<ul>
+<li>Wavelength<br></li>
+<li>Spectral signature (discrete or continuous)<br></li>
+<li>Constrained to atmospheric windows<br></li>
+<li>Measuring spectral reflectance - spectroradiometer</li>
+</ul></li>
+<li><p><strong>Temporal Resolution</strong><br> <em>Revisit time of sensor, which refers to the frequency at which imagery is recorded for a particular area.</em></p></li>
+<li><p><strong>Radiometric Resolution</strong><br> <em>The amount of information in each pixel, which refers to the ability of a sensor to identify and show small differences in energy</em></p></li>
+</ul>
+<div class="quarto-layout-panel">
 <div class="quarto-layout-row quarto-layout-valign-top">
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="W1_2types.png" class="img-fluid" alt="Figrue 1 Two Types Of Sensors">source:<a href="https://eos.com/blog/types-of-remote-sensing/">EOS Data Analytics</a>; <a href="https://gisgeography.com/passive-active-sensors-remote-sensing/">GISGeography</a>; <a href="https://andrewmaclachlan.github.io/CASA0023-lecture-1/#23">Andrew’s Pages</a></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="spatial.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Spatial Resolution</figcaption><p></p>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="spectral.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Spectral Resolution</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="temporal.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Temporal Resolution</figcaption><p></p>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="radiometric.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Radiometric Resolution</figcaption><p></p>
+</figure>
+</div>
 </div>
 </div>
 </div>

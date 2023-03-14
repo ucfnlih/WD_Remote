@@ -1,8 +1,10 @@
 {
-  "hash": "a51d441042bf3bdfd3a49253abc0c03e",
+  "hash": "882aef7a9ec08b1e7f46de1141f9b361",
   "result": {
-    "markdown": "# Introduction\n\nThis is a Quarto book.\n\nTo learn more about Quarto books visit <https://quarto.org/docs/books>.\n\n\n::: {.cell}\n\n```{.r .cell-code}\n1 + 1\n```\n\n::: {.cell-output .cell-output-stdout}\n```\n[1] 2\n```\n:::\n\n```{.r .cell-code}\n4+5\n```\n\n::: {.cell-output .cell-output-stdout}\n```\n[1] 9\n```\n:::\n\n```{.r .cell-code}\n5+78\n```\n\n::: {.cell-output .cell-output-stdout}\n```\n[1] 83\n```\n:::\n:::\n\n\n::: {#CHUNKNAME layout-ncol=\"2\"}\n![](figure1.png){#reference)\n:::\n",
-    "supporting": [],
+    "markdown": "# Introduction\n\nThis is Wendi's book\n\nTo learn more about Quarto books visit <https://quarto.org/docs/books>.\n\n\n::: {.cell}\n\n```{.r .cell-code}\n1 + 1\n```\n\n::: {.cell-output .cell-output-stdout}\n```\n[1] 2\n```\n:::\n\n```{.r .cell-code}\n4+5\n```\n\n::: {.cell-output .cell-output-stdout}\n```\n[1] 9\n```\n:::\n\n```{.r .cell-code}\n5+78\n```\n\n::: {.cell-output .cell-output-stdout}\n```\n[1] 83\n```\n:::\n:::\n\n\n::: {#CHUNKNAME layout-ncol=\"2\"}\n![](figure1.png){#reference)\n:::\n",
+    "supporting": [
+      "index_files"
+    ],
     "filters": [
       "rmarkdown/pagebreak.lua"
     ],

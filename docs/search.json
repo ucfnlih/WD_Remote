@@ -4,12 +4,12 @@
     "href": "index.html",
     "title": "Wendi’s Learning Diary",
     "section": "",
-    "text": "1 Introduction\nThis is a Quarto book.\nTo learn more about Quarto books visit https://quarto.org/docs/books.\n\n1 + 1\n\n[1] 2\n\n4+5\n\n[1] 9\n\n5+78\n\n[1] 83\n\n\n\n\n\n{#reference)"
+    "text": "1 Introduction\nThis is Wendi’s book\nTo learn more about Quarto books visit https://quarto.org/docs/books.\n\n1 + 1\n\n[1] 2\n\n4+5\n\n[1] 9\n\n5+78\n\n[1] 83\n\n\n\n\n\n{#reference)"
   },
   {
     "objectID": "intro.html",
     "href": "intro.html",
-    "title": "1  Introduction",
+    "title": "3  Introduction",
     "section": "",
     "text": "This is a book created from Wendi Li"
   },
@@ -30,8 +30,8 @@
   {
     "objectID": "WEEK1.html#summary",
     "href": "WEEK1.html#summary",
-    "title": "2  WEEK1",
+    "title": "2  Getting star with remote sensing",
     "section": "2.1 Summary",
-    "text": "2.1 Summary\nRemote sensing is the acquisition of information about an object or phenomenon without making physical contact with the object (from a distance), which is one of the specific methods of Earth observation. Remote sensing is an interesting and useful field with mass of data, it can detect the urban phenomena from a broader perspective and support for policy development. However, satellites also bring space junk. According to statistics, there are 3,000 dead satellites and around 34,000 pieces bigger than 10 centimetres in size littering space, which increases the hitting risk.\nRemote sensing is achieved through sensors, which can be on satellites or mounted on aircraft. There are two main categories of remote sensors, active sensors and passive sensors. Passive sensors receive and detect electromagnetic waves emitted by the target itself or reflected radiation from nature, with no emission source of its own. While active sensors emit electromagnetic waves to the target, which in turn receives their reflection. Each sensor has its own strengths and weaknesses (Figure 1), and using them in combination typically results in more accurate prediction data.\n\n\n\nsource:EOS Data Analytics; GISGeography; Andrew’s Pages"
+    "text": "2.1 Summary\nRemote sensing is the acquisition of information about an object or phenomenon without making physical contact with the object (from a distance), which is one of the specific methods of Earth observation. Remote sensing is an interesting and useful field with mass of data, it can detect the urban phenomena from a broader perspective and support for policy development. However, satellites also bring space junk. According to statistics, there are 3,000 dead satellites and around 34,000 pieces bigger than 10 centimetres in size littering space, which increases the hitting risk.\nRemote sensing is achieved through sensors, which can be on satellites or mounted on aircraft. There are two main categories of remote sensors, active sensors and passive sensors. Passive sensors receive and detect electromagnetic waves emitted by the target itself or reflected radiation from nature, with no emission source of its own. While active sensors emit electromagnetic waves to the target, which in turn receives their reflection. Each sensor has its own strengths and weaknesses (Figure 1), and using them in combination typically results in more accurate prediction data.\n\n\n\n\nFigrue 1 Two Types Of Sensors\n\n\nsource:EOS Data Analytics; GISGeography; Andrew’s Pages\n\nRaster data is the most common remote sensing data format, and its encoding methods mainly includes band interleaved by line (BIL), band sequential (BSQ), band interleaved by pixel (BIP) adn GeoTIFF (most common). To measure the quality and potential detail of imagery, four resolutions are used as metrics:\n\nSpatial Resolution  Size of the raster grid per pixel. Describing how detailed objects are in an image.\nSpectral Resolution Number and size of bands that a remote sensing platform can capture\n\nWavelength\nSpectral signature (discrete or continuous)\nConstrained to atmospheric windows\nMeasuring spectral reflectance - spectroradiometer\n\nTemporal Resolution Revisit time of sensor, which refers to the frequency at which imagery is recorded for a particular area.\nRadiometric Resolution The amount of information in each pixel, which refers to the ability of a sensor to identify and show small differences in energy\n\n\n\n\n\n\n\nSpatial Resolution\n\n\n\n\n\n\n\nSpectral Resolution\n\n\n\n\n\n\n\n\n\nTemporal Resolution\n\n\n\n\n\n\n\nRadiometric Resolution"
   }
 ]
