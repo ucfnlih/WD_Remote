@@ -8,12 +8,41 @@ Remote sensing is the acquisition of information about an object or phenomenon w
 
 Remote sensing is achieved through sensors, which can be on satellites or mounted on aircraft. There are two main categories of remote sensors, active sensors and passive sensors. Passive sensors receive and detect electromagnetic waves emitted by the target itself or reflected radiation from nature, with no emission source of its own. While active sensors emit electromagnetic waves to the target, which in turn receives their reflection. Each sensor has its own strengths and weaknesses (Figure 1), and using them in combination typically results in more accurate prediction data.
 
-::: {#CHUNKNAME layout-ncol="2"}
-<center>![Figrue 1 Two Types Of Sensors](W1_2types.png){width="300"}</center>
+<center>
 
-source:[EOS Data Analytics](https://eos.com/blog/types-of-remote-sensing/); [GISGeography](https://gisgeography.com/passive-active-sensors-remote-sensing/); [Andrew's Pages](https://andrewmaclachlan.github.io/CASA0023-lecture-1/#23)
+![Figrue 1 Two Types Of Sensors](W1_2types.png){width="80%"}
+
+source:[EOS Data Analytics](https://eos.com/blog/types-of-remote-sensing/); [GISGeography](https://gisgeography.com/passive-active-sensors-remote-sensing/); [Andrew's Pages](https://andrewmaclachlan.github.io/CASA0023-lecture-1/#23)</center>
+
+<br/>
+Raster data is the most common remote sensing data format, and its encoding methods mainly includes band interleaved by line (BIL), band sequential (BSQ), band interleaved by pixel (BIP) adn GeoTIFF (most common). To measure the quality and potential detail of imagery, four resolutions are used as metrics:
+
+- **Spatial Resolution** <br/> 
+*Size of the raster grid per pixel. Describing how detailed objects are in an image.*
+
+- **Spectral Resolution**<br/>
+*Number and size of bands that a remote sensing platform can capture*<br/>
+   + Wavelength<br/>
+   + Spectral signature (discrete or continuous)<br/>
+   + Constrained to atmospheric windows<br/>
+   + Measuring spectral reflectance - spectroradiometer
+
+- **Temporal Resolution**<br/>
+*Revisit time of sensor, which refers to the frequency at which imagery is recorded for a particular area.*
+
+- **Radiometric Resolution**<br/>
+*The amount of information in each pixel, which refers to the ability of a sensor to identify and show small differences in energy*
+
+::: {layout-nrow="2"}
+![Spatial Resolution](spatial.png)
+
+![Spectral Resolution](spectral.png)
+
+![Temporal Resolution](temporal.png)
+
+![Radiometric Resolution](radiometric.png)
 :::
 
+## Application
 
-
-
+## Reflection
