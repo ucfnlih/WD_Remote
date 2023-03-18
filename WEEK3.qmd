@@ -39,7 +39,7 @@ Source:[Intermap](https://www.intermap.com/blog/orthorectification-in-a-nutshell
 In remote sensing detection, electromagnetic waves travel through  atmosphere twice creating an adjacency effect, which is the reason for atmospheric correction. [Atmospheric correction is mainly divided into relative correction and absolute correction](https://www.linkedin.com/pulse/atmospheric-correction-dinesh-shrestha/), and they assume that a linear trend is existed for radiance between atmosphere and ground and the atmospheric measurements are available respectively. Dark Object Subtraction (DOS) is the most used methods to correct atmosphere and it is the most simplest one, and absolute correction methods are relatively difficult due to the unavailability of information they need. Empirical line correction is a special method which needs a reference spectrum from field or laboratory and use a linear regression to equate DN and reflectance.In my point of view, it is close to the relative correction method but cannot be fully attributed to it, because it is not exactly corrected by normalization.
 
 <center>![](Atmospheric_Correction.png){width=80%}</center>
-
+</br>
 Created by: Wendi Li
 
 
