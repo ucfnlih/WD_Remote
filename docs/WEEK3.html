@@ -127,6 +127,12 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary"><span class="toc-section-number">4.1</span>  Summary</a>
   <ul class="collapse">
   <li><a href="#correction" id="toc-correction" class="nav-link" data-scroll-target="#correction"><span class="toc-section-number">4.1.1</span>  Correction</a></li>
+  <li><a href="#merging-and-enhancement" id="toc-merging-and-enhancement" class="nav-link" data-scroll-target="#merging-and-enhancement"><span class="toc-section-number">4.1.2</span>  Merging and Enhancement</a></li>
+  </ul></li>
+  <li><a href="#application" id="toc-application" class="nav-link" data-scroll-target="#application"><span class="toc-section-number">4.2</span>  Application</a>
+  <ul class="collapse">
+  <li><a href="#application-in-correction" id="toc-application-in-correction" class="nav-link" data-scroll-target="#application-in-correction"><span class="toc-section-number">4.2.1</span>  Application in correction</a></li>
+  <li><a href="#application-in-image-merging" id="toc-application-in-image-merging" class="nav-link" data-scroll-target="#application-in-image-merging"><span class="toc-section-number">4.2.2</span>  Application in image merging</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -204,16 +210,17 @@ A(Identifying Ground &lt;br/&gt; Control Points) --&gt; B(Getting geometric &lt;
 </div>
 </center>
 <p>Source:<a href="https://www.intermap.com/blog/orthorectification-in-a-nutshell">Intermap</a></p>
-<section id="atmospheric-correction" class="level5" data-number="4.1.1.2.1">
-<h5 data-number="4.1.1.2.1" class="anchored" data-anchor-id="atmospheric-correction"><span class="header-section-number">4.1.1.2.1</span> Atmospheric Correction</h5>
+</section>
+<section id="atmospheric-correction" class="level4" data-number="4.1.1.3">
+<h4 data-number="4.1.1.3" class="anchored" data-anchor-id="atmospheric-correction"><span class="header-section-number">4.1.1.3</span> Atmospheric Correction</h4>
 <p>In remote sensing detection, electromagnetic waves travel through atmosphere twice creating an adjacency effect, which is the reason for atmospheric correction. <a href="https://www.linkedin.com/pulse/atmospheric-correction-dinesh-shrestha/">Atmospheric correction is mainly divided into relative correction and absolute correction</a>, and they assume that a linear trend is existed for radiance between atmosphere and ground and the atmospheric measurements are available respectively. Dark Object Subtraction (DOS) is the most used methods to correct atmosphere and it is the most simplest one, and absolute correction methods are relatively difficult due to the unavailability of information they need. Empirical line correction is a special method which needs a reference spectrum from field or laboratory and use a linear regression to equate DN and reflectance.In my point of view, it is close to the relative correction method but cannot be fully attributed to it, because it is not exactly corrected by normalization.</p>
 <center>
 <img src="Atmospheric_Correction.png" class="img-fluid" style="width:80.0%">
 </center>
 <p><br> Created by: Wendi Li</p>
 </section>
-<section id="radiometric-calibration" class="level5" data-number="4.1.1.2.2">
-<h5 data-number="4.1.1.2.2" class="anchored" data-anchor-id="radiometric-calibration"><span class="header-section-number">4.1.1.2.2</span> Radiometric Calibration</h5>
+<section id="radiometric-calibration" class="level4" data-number="4.1.1.4">
+<h4 data-number="4.1.1.4" class="anchored" data-anchor-id="radiometric-calibration"><span class="header-section-number">4.1.1.4</span> Radiometric Calibration</h4>
 <p>Radiometric Calibration is the ability to convert the uncalibrated and raw digital numbers (DN) for pixel value that recorded by satellite into physical units (W/m2/sr/µm), which aims to produce perfect images with regular coloration and correct exposure.</p>
 <center>
 <div class="quarto-figure quarto-figure-center">
@@ -224,10 +231,79 @@ A(Identifying Ground &lt;br/&gt; Control Points) --&gt; B(Getting geometric &lt;
 </div>
 </center>
 <p>Source:<a href="https://www.materials-talks.com/the-importance-of-calibrating-your-remote-sensing-imagery/">Malvern Panalytical</a></p>
-
-
 </section>
 </section>
+<section id="merging-and-enhancement" class="level3" data-number="4.1.2">
+<h3 data-number="4.1.2" class="anchored" data-anchor-id="merging-and-enhancement"><span class="header-section-number">4.1.2</span> Merging and Enhancement</h3>
+<p>Remote sensing data (e.g.&nbsp;Landsat, Sentinel) are obtained from constantly moving satellites at regular time intervals, which results in they consist of many separate tiles. If we want to get the data of a bigger area, imagery merging will be used, which is called as “Mosaicking” in remote sensing. When joining two or more tiles, it is better to choose the tile with close time and have less cloud so that the merging imagery will be clearer. After getting the image we need, some enhancement methods will be used to deal with the image to make it easier to analyze or bring out features, which including ratio, filtering, texture, data fusion and PCA.</p>
+<center>
+<img src="Image_Processing.png" class="img-fluid" style="width:70.0%">
+</center>
+<p>Created by: Wendi Li</p>
+</section>
+</section>
+<section id="application" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="application"><span class="header-section-number">4.2</span> Application</h2>
+<section id="application-in-correction" class="level3" data-number="4.2.1">
+<h3 data-number="4.2.1" class="anchored" data-anchor-id="application-in-correction"><span class="header-section-number">4.2.1</span> Application in correction</h3>
+<div class="callout-paper callout callout-style-default no-icon callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Paper
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Rocchini, D., Di Rita, A., 2005. <strong>Relief effects on aerial photos geometric correction</strong>. Applied Geography 25, 159–168. https://doi.org/10.1016/j.apgeog.2005.03.002s</p>
+</div>
+</div>
+<p>This paper takes aerial photos as research object, applying geometric correction (called polynomial methods in the text) and orthorectification correction to aerial photos in three terrain types with different roughness (a flat area, a hilly area and a volcanic area) to test the effectiveness of them. This study was conducted based on Italy.</p>
+<p>For geometric correction, 20 GCPs are selected randomly within the area and used in first and second order equation (the following figure). And the orthorectification correction uses an algorithm of the digital terrain model (DTM) which proposed by <a href="https://www.asprs.org/wp-content/uploads/pers/1979journal/jun/1979_jun_727-734.pdf">Konecny (1979)</a> and <a href="https://www.asprs.org/wp-content/uploads/pers/1992journal/mar/1992_mar_339-344.pdf">Novak (1992)</a>. These two methods are used for three areas with different terrain roughness respectively, and then using the nearest neighbour method to output the images with 2 m pixel dimension, which compares the original image and corrected image. The RMSE for each area corresponding to each correction methods finally derived.</p>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="equation.png" class="img-fluid figure-img" style="width:80.0%"></p>
+<p></p><figcaption class="figure-caption">(x,y): the coordinates of image to be rectified; (X,Y): coordinates of the reference image or map</figcaption><p></p>
+</figure>
+</div>
+</center>
+<p>Source: Rocchini and Di Rita, 2005</p>
+<p>The results show that these two methods have the similar performance in flat areas, but as the terrain gets steeper, orthorectification correction works better. And a worthwhile discussion point is the relationship between GCP and RMSE. In general, fewer GCPs can result in lower RMSE values, but a low RMSE value does not mean high accuracy. In fact, as the number of GCPs is increasing, the RMSE value will rise firstly then fall, and finally stabilize. And it is impossible to get a very low value of RMSE because it is sensitibve.</p>
+<center>
+<img src="RMSE.png" class="img-fluid" style="width:80.0%">
+</center>
+<p>Source: Rocchini and Di Rita, 2005</p>
+</section>
+<section id="application-in-image-merging" class="level3" data-number="4.2.2">
+<h3 data-number="4.2.2" class="anchored" data-anchor-id="application-in-image-merging"><span class="header-section-number">4.2.2</span> Application in image merging</h3>
+<div class="callout-paper callout callout-style-default no-icon callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Paper
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Rigol, J.P., Chica-Olmo, M., 1998. <strong>Merging remote-sensing images for geological-environmental mapping: application to the Cabo de Gata-Níjar Natural Park, Spain</strong>. Environmental Geology 34, 194–202. https://doi.org/10.1007/s002540050271</p>
+</div>
+</div>
+<p>The Cabo de Gata Níjar Natural Park is a natural park in Spain which has numerous abandoned mineral resources. For this reason, many activities of mining and sulphide metals extraction has been occured throughout the region, which caused the pollution problem. Before the environmental study, researchers should identify the exact locations of the mine works and waste tips, which will use the image merging in remote sensing technology.</p>
+<p>Sensors of SPOT HRV and Landsat Thematic Mapper (TM) are used in this study, which are commonly used in natural study. These two sensors have their own characteristics, so combination will provide researches more useful information. The merging process is mainly divide into two step. In the first step, a digital preprocessing is done to implement a physically coordinate fusing of them. In the second part, a merging of spatial and spectral information is implemented, which aims to combine the useful information of two data set into one. The basic principle of merging is that the original multispectral data is put into a new coordinate system through coordinate transform, where an axe represents the intensity image. The band of panchromatic data is then used to replace it, and finally the merging is completed by a reverse transform.</p>
+<center>
+<img src="merging.png" class="img-fluid" style="width:60.0%">
+</center>
+<p>Source: Rigol and Chica-Olmo, 1998</p>
+<p>There are 5 methods of merging used in this study for testing, which includes IHS, SC, PCA, CN and HPF. The result shows that the HPF performs best with the least distortions, followed by PCA. THE IHS is the worst offender in this case. However, due to the lack of visual appeal of HPF images, the strong-versatility PCA has become the most widely used in current research.</p>
+<center>
+<img src="5methods.png" class="img-fluid" style="width:60.0%">
+</center>
+<p>Source: Rigol and Chica-Olmo, 1998</p>
+
+
 </section>
 </section>
 

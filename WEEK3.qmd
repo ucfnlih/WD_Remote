@@ -5,6 +5,7 @@
 ### Correction
 
 #### Geometric Correction
+
 [Geometric correction](http://www.flexiblepicturesystems.com/technology.html) in remote sensing is the digital process of matching the image projection to a specific projection surface. When remote sensing data is collected, the image will be distorted due to view angle, topography, wind, etc. To deal with the distortion, ground control points (GCP) plays a huge role. [Ground control points](https://medium.com/aerial-acuity/what-are-ground-control-points-gcps-and-how-do-i-use-them-4f4c3771fd0b) are large marked targets on the ground, it can help remote sensing instruments to determine the exact geographical location of the image and then determin the geometric transformation coefficients. The linear algorithm is then used t o calculate the positions in the rectified (gold standard) map. Finally, using RMSE to test the error and choose the best model.
 
 ```{mermaid}
@@ -52,4 +53,57 @@ Radiometric Calibration is the ability to convert the uncalibrated and raw digit
 Source:[Malvern Panalytical](https://www.materials-talks.com/the-importance-of-calibrating-your-remote-sensing-imagery/)
 
 ### Merging and Enhancement
+
+Remote sensing data (e.g. Landsat, Sentinel) are obtained from constantly moving satellites at regular time intervals, which results in they consist of many separate tiles. If we want to get the data of a bigger area, imagery merging will be used, which is called as "Mosaicking" in remote sensing. When joining two or more tiles, it is better to choose the tile with close time and have less cloud so that the merging imagery will be clearer. After getting the image we need, some enhancement methods will be used to deal with the image to make it easier to analyze or bring out features, which including ratio, filtering, texture, data fusion and PCA.
+
+<center>![](Image_Processing.png){width="70%"}</center>
+
+Created by: Wendi Li
+
+## Application
+
+### Application in correction
+
+::: callout-paper
+Rocchini, D., Di Rita, A., 2005. **Relief effects on aerial photos geometric correction**. Applied Geography 25, 159--168. https://doi.org/10.1016/j.apgeog.2005.03.002s
+:::
+
+This paper takes aerial photos as research object, applying geometric correction (called polynomial methods in the text) and orthorectification correction to aerial photos in three terrain types with different roughness (a flat area, a hilly area and a volcanic area) to test the effectiveness of them. This study was conducted based on Italy.
+
+For geometric correction, 20 GCPs are selected randomly within the area and used in first and second order equation (the following figure). And the orthorectification correction uses an algorithm of the digital terrain model (DTM) which proposed by [Konecny (1979)](https://www.asprs.org/wp-content/uploads/pers/1979journal/jun/1979_jun_727-734.pdf) and [Novak (1992)](https://www.asprs.org/wp-content/uploads/pers/1992journal/mar/1992_mar_339-344.pdf). These two methods are used for three areas with different terrain roughness respectively, and then using the nearest neighbour method to output the images with 2 m pixel dimension, which compares the original image and corrected image. The RMSE for each area corresponding to each correction methods finally derived.
+
+<center>![(x,y): the coordinates of image to be rectified; (X,Y): coordinates of the reference image or map](equation.png){width="80%"}</center>
+Source: Rocchini and Di Rita, 2005
+
+The results show that these two methods have the similar performance in flat areas, but as the terrain gets steeper, orthorectification correction works better. And a worthwhile discussion point is the relationship between GCP and RMSE. In general, fewer GCPs can result in lower RMSE values, but a low RMSE value does not mean high accuracy. In fact, as the number of GCPs is increasing, the RMSE value will rise firstly then fall, and finally stabilize. And it is impossible to get a very low value of RMSE because it is sensitibve.
+
+<center>![](RMSE.png){width="80%"}</center>
+Source: Rocchini and Di Rita, 2005
+
+### Application in image merging
+
+::: callout-paper
+Rigol, J.P., Chica-Olmo, M., 1998. **Merging remote-sensing images for geological-environmental mapping: application to the Cabo de Gata-Níjar Natural Park, Spain**. Environmental Geology 34, 194–202. https://doi.org/10.1007/s002540050271
+:::
+
+The Cabo de Gata Níjar Natural Park is a natural park in Spain which has numerous abandoned mineral resources. For this reason, many activities of mining and sulphide metals extraction has been occured throughout the region, which caused the pollution problem. Before the environmental study, researchers should identify the exact locations of the mine works and waste tips, which will use the image merging in remote sensing technology.
+
+
+Sensors of SPOT HRV and Landsat Thematic Mapper (TM) are used in this study, which are commonly used in natural study. These two sensors have their own characteristics, so combination will provide researches more useful information. The merging process is mainly divide into two step. In the first step, a digital preprocessing is done to implement a physically coordinate fusing of them. In the second part, a merging of spatial and spectral information is implemented, which aims to combine the useful information of two data set into one. The basic principle of merging is that the original multispectral data is put into a new coordinate system through coordinate transform, where an axe represents the intensity image. The band of panchromatic data is then used to replace it, and finally the merging is completed by a reverse transform. 
+
+<center>![](merging.png){width=60%}</center>
+Source: Rigol and Chica-Olmo, 1998
+
+There are 5 methods of merging used in this study for testing, which includes IHS, SC, PCA, CN and HPF. The result shows that the HPF performs best with the least distortions, followed by PCA. THE IHS is the worst offender in this case. However, due to the lack of visual appeal of HPF images, the strong-versatility PCA has become the most widely used in current research.
+
+<center>![](5methods.png){width=60%}</center>
+Source: Rigol and Chica-Olmo, 1998
+
+## Personal Reflection
+
+
+
+
+
+
 
