@@ -82,7 +82,7 @@ The results show that these two methods have the similar performance in flat are
 
 Source: Rocchini and Di Rita, 2005
 
-::: callout-tip
+::: {.callout-tip}
 ## My comment
 
 This is an example of a callout with a title.

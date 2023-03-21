@@ -11,14 +11,27 @@ book:
     - WEEK1.qmd
     - WEEK2.qmd
     - WEEK3.qmd
+    - WEEK6.qmd
+  repo-url: https://github.com/ucfnlih/WD_Remote.git
+  downloads: [pdf, epub]
+  sharing: [twitter, facebook]
 
 bibliography: references.bib
 
+comments:
+  hypothesis: true
+  
+
+  
+
 format:
   html:
-    theme: cosmo
+    theme: [cosmo,minty]
   pdf:
     documentclass: scrreprt
 
 editor: visual
+
+
+number-sections: False
 

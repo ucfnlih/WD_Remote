@@ -1,0 +1,23 @@
+# Classification
+
+## Summary
+
+Remote sensing images usually contain a lot of information, such as vegetation, sea, buildings, etc. These different classifications of information appear more complex in urban areas. When using remote sensing data for research, it is common to use some classified information instead of all, which is called classified data. The land cover is one of the typical and popular classified data, which is useful for urban planning and Disaster detection. For example, using EO data to detect urban green area achieve the physical accessibility, which improves the efficiency of government monitoring urban expansion and land use [(Giuliani et al., 2021)](https://www.mdpi.com/2072-4292/13/3/422). And in the most cited paper on forest fire, different types of vegetation are detected from Landsat image to identify the flammable trees and obtain a fire hazard map[(Chuvieco and Congalton, 1989)](https://www.sciencedirect.com/science/article/pii/0034425789900230).
+
+<center>
+::: {layout-ncol=2}
+![Vegetated areas over the Geneva canton for 2019, computed with Sentinel-2 data](Geneva.png)
+
+![Vegetation map (different colors indicate different types of vegetation)](forestfire.png)
+:::
+</center>
+Sources: [Giuliani et al., 2021](https://www.mdpi.com/2072-4292/13/3/422); [Chuvieco and Congalton, 1989](https://www.sciencedirect.com/science/article/pii/0034425789900230)
+
+But how can we extract such information? This will involve machine learning, which is science of computer modeling of learning process.
+
+[Machine learning](https://en.wikipedia.org/wiki/Machine_learning) is based on data and it can help us make decisions or predictions without explicit programming, which also known as training. There are many models in machine learning, including the linear regression model that many people are familiar with.
+
+Classification and regression trees (CART)-classification & regression
+
+<center>![Outline of Machine Learning](ML.png){width=120%}</center>
+Created by: Wendi Li
