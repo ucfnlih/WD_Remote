@@ -1,18 +1,3 @@
 # Introduction
 
-This is Wendi's book
-
-To learn more about Quarto books visit <https://quarto.org/docs/books>.
-
-```{r}
-1 + 1
-
-4+5
-
-5+78
-
-```
-
-::: {#CHUNKNAME layout-ncol="2"}
-![](figure1.png){#reference)
-:::
+## WHO AM I ?

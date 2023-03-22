@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Wendi’s Learning Diary",
     "section": "",
-    "text": "Introduction\nThis is Wendi’s book\nTo learn more about Quarto books visit https://quarto.org/docs/books.\n\n1 + 1\n\n[1] 2\n\n4+5\n\n[1] 9\n\n5+78\n\n[1] 83\n\n\n\n\n\n{#reference)"
+    "text": "Introduction"
   },
   {
     "objectID": "intro.html",
@@ -110,5 +110,12 @@
     "title": "Classification",
     "section": "Summary",
     "text": "Summary\nRemote sensing images usually contain a lot of information, such as vegetation, sea, buildings, etc. These different classifications of information appear more complex in urban areas. When using remote sensing data for research, it is common to use some classified information instead of all, which is called classified data. The land cover is one of the typical and popular classified data, which is useful for urban planning and Disaster detection. For example, using EO data to detect urban green area achieve the physical accessibility, which improves the efficiency of government monitoring urban expansion and land use (Giuliani et al., 2021). And in the most cited paper on forest fire, different types of vegetation are detected from Landsat image to identify the flammable trees and obtain a fire hazard map(Chuvieco and Congalton, 1989).\n\n\n\n\n\n\n\nVegetated areas over the Geneva canton for 2019, computed with Sentinel-2 data\n\n\n\n\n\n\n\nVegetation map (different colors indicate different types of vegetation)\n\n\n\n\n\n\nSources: Giuliani et al., 2021; Chuvieco and Congalton, 1989\nClassification and regression trees (CART)-classification & regression\n\n\n\n\nOutline of Machine Learning\n\n\n\nCreated by: Wendi Li"
+  },
+  {
+    "objectID": "index.html#who-am-i",
+    "href": "index.html#who-am-i",
+    "title": "Wendi’s Learning Diary",
+    "section": "WHO AM I ?",
+    "text": "WHO AM I ?"
   }
 ]
