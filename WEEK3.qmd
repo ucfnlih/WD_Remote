@@ -62,9 +62,11 @@ Created by: Wendi Li
 
 ## Application
 
-### Application in correction
+### Application of correction: aerial photos
 
-::: callout-paper
+::: callout-note
+# Paper
+
 Rocchini, D., Di Rita, A., 2005. **Relief effects on aerial photos geometric correction**. Applied Geography 25, 159--168. https://doi.org/10.1016/j.apgeog.2005.03.002s
 :::
 
@@ -88,9 +90,11 @@ Source: Rocchini and Di Rita, 2005
 This is an example of a callout with a title.
 :::
 
-### Application in image merging
+### Application of image merging: the Cabo de Gata-Níjar Natural Park, Spain
 
-::: callout-paper
+::: callout-note
+# Paper
+
 Rigol, J.P., Chica-Olmo, M., 1998. **Merging remote-sensing images for geological-environmental mapping: application to the Cabo de Gata-Níjar Natural Park, Spain**. Environmental Geology 34, 194--202. https://doi.org/10.1007/s002540050271
 :::
 
