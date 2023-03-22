@@ -166,8 +166,8 @@ ul.task-list li input[type="checkbox"] {
   <ul>
   <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary">Summary</a>
   <ul class="collapse">
-  <li><a href="#correction" id="toc-correction" class="nav-link" data-scroll-target="#correction">Correction</a></li>
-  <li><a href="#merging-and-enhancement" id="toc-merging-and-enhancement" class="nav-link" data-scroll-target="#merging-and-enhancement">Merging and Enhancement</a></li>
+  <li><a href="#correction" id="toc-correction" class="nav-link" data-scroll-target="#correction">1. Correction</a></li>
+  <li><a href="#merging-and-enhancement" id="toc-merging-and-enhancement" class="nav-link" data-scroll-target="#merging-and-enhancement">2. Merging and Enhancement</a></li>
   </ul></li>
   <li><a href="#application" id="toc-application" class="nav-link" data-scroll-target="#application">Application</a>
   <ul class="collapse">
@@ -201,7 +201,7 @@ ul.task-list li input[type="checkbox"] {
 <section id="summary" class="level2">
 <h2 class="anchored" data-anchor-id="summary">Summary</h2>
 <section id="correction" class="level3">
-<h3 class="anchored" data-anchor-id="correction">Correction</h3>
+<h3 class="anchored" data-anchor-id="correction">1. Correction</h3>
 <section id="geometric-correction" class="level4">
 <h4 class="anchored" data-anchor-id="geometric-correction">Geometric Correction</h4>
 <p><a href="http://www.flexiblepicturesystems.com/technology.html">Geometric correction</a> in remote sensing is the digital process of matching the image projection to a specific projection surface. When remote sensing data is collected, the image will be distorted due to view angle, topography, wind, etc. To deal with the distortion, ground control points (GCP) plays a huge role. <a href="https://medium.com/aerial-acuity/what-are-ground-control-points-gcps-and-how-do-i-use-them-4f4c3771fd0b">Ground control points</a> are large marked targets on the ground, it can help remote sensing instruments to determine the exact geographical location of the image and then determin the geometric transformation coefficients. The linear algorithm is then used t o calculate the positions in the rectified (gold standard) map. Finally, using RMSE to test the error and choose the best model.</p>
@@ -275,7 +275,7 @@ A(Identifying Ground &lt;br/&gt; Control Points) --&gt; B(Getting geometric &lt;
 </section>
 </section>
 <section id="merging-and-enhancement" class="level3">
-<h3 class="anchored" data-anchor-id="merging-and-enhancement">Merging and Enhancement</h3>
+<h3 class="anchored" data-anchor-id="merging-and-enhancement">2. Merging and Enhancement</h3>
 <p>Remote sensing data (e.g.&nbsp;Landsat, Sentinel) are obtained from constantly moving satellites at regular time intervals, which results in they consist of many separate tiles. If we want to get the data of a bigger area, imagery merging will be used, which is called as “Mosaicking” in remote sensing. When joining two or more tiles, it is better to choose the tile with close time and have less cloud so that the merging imagery will be clearer. After getting the image we need, some enhancement methods will be used to deal with the image to make it easier to analyze or bring out features, which including ratio, filtering, texture, data fusion and PCA.</p>
 <center>
 <img src="Image_Processing.png" class="img-fluid" style="width:70.0%">

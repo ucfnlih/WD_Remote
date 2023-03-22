@@ -2,7 +2,7 @@
 
 ## Summary
 
-### Correction
+### 1. Correction
 
 #### Geometric Correction
 
@@ -52,7 +52,7 @@ Radiometric Calibration is the ability to convert the uncalibrated and raw digit
 
 Source:[Malvern Panalytical](https://www.materials-talks.com/the-importance-of-calibrating-your-remote-sensing-imagery/)
 
-### Merging and Enhancement
+### 2. Merging and Enhancement
 
 Remote sensing data (e.g. Landsat, Sentinel) are obtained from constantly moving satellites at regular time intervals, which results in they consist of many separate tiles. If we want to get the data of a bigger area, imagery merging will be used, which is called as "Mosaicking" in remote sensing. When joining two or more tiles, it is better to choose the tile with close time and have less cloud so that the merging imagery will be clearer. After getting the image we need, some enhancement methods will be used to deal with the image to make it easier to analyze or bring out features, which including ratio, filtering, texture, data fusion and PCA.
 

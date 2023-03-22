@@ -13,11 +13,9 @@ Remote sensing images usually contain a lot of information, such as vegetation, 
 </center>
 Sources: [Giuliani et al., 2021](https://www.mdpi.com/2072-4292/13/3/422); [Chuvieco and Congalton, 1989](https://www.sciencedirect.com/science/article/pii/0034425789900230)
 
-But how can we extract such information? This will involve machine learning, which is science of computer modeling of learning process.
+**But how can we extract such information?** This will involve machine learning, which is science of computer modeling of learning process.
 
-[Machine learning](https://en.wikipedia.org/wiki/Machine_learning) is based on data and it can help us make decisions or predictions without explicit programming, which also known as training. There are many models in machine learning, including the linear regression model that many people are familiar with.
-
-Classification and regression trees (CART)-classification & regression
+[Machine learning (ML)](https://en.wikipedia.org/wiki/Machine_learning) is based on data and it can help us make decisions or predictions without explicit programming, which also known as training. There are many models in machine learning, including the linear regression model that many people are familiar with and some complex models such as tree-based model and neural network. In remote sensing area, tree-based model is mainly used to identiy. image. Tree-based model uses different input variables to make complex decisions, of which classification and regression trees (CART) and random forest models are most commonly used.
 
 <center>![Outline of Machine Learning](ML.png){width=120%}</center>
 Created by: Wendi Li
