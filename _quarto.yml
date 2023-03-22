@@ -16,6 +16,8 @@ book:
   downloads: [pdf, epub]
   sharing: [twitter, facebook]
 
+number-sections: False
+
 bibliography: references.bib
 
 comments:
@@ -33,5 +35,4 @@ format:
 editor: visual
 
 
-number-sections: False
 
