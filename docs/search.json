@@ -124,5 +124,12 @@
     "title": "A Small Presentation Of LiDAR",
     "section": "slides",
     "text": "slides"
+  },
+  {
+    "objectID": "WEEK7.html#summary",
+    "href": "WEEK7.html#summary",
+    "title": "Classification II",
+    "section": "Summary",
+    "text": "Summary\nImage analysis is divided into pixel-based and object-based. Pixel-based analysis is the traditional classification method which focuses on separated pixel and spectral information but not detect the boundary. While Object-Based Image Analysis (OBIA) segments the image into some vector images that consist of several small pixels. Segmentation and classification are two principles of OBIA, it firstly segments the image into the meaningful physical objects and then classifies them into different categories according to spectral, geometrical, and spatial properties. Nowadays, the vast majority of scholars believe that OBIA has higher accuracy than piexel-based\n\n\n\n\n\n\n\n\n\n\n\n\nSources:Crommelinck et al., 2016; Stack"
   }
 ]

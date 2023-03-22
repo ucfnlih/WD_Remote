@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Wendi’s Learning Diary - 5&nbsp; Classification</title>
+<title>Wendi’s Learning Diary - 6&nbsp; Classification II</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./WEEK7.html" rel="next">
-<link href="./WEEK3.html" rel="prev">
+<link href="./WEEK6.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -71,7 +70,7 @@ ul.task-list li input[type="checkbox"] {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title"><span class="chapter-title">Classification</span></h1>
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-title">Classification II</span></h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -149,12 +148,12 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./WEEK6.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Classification</span></a>
+  <a href="./WEEK6.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Classification</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./WEEK7.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Classification II</span></a>
+  <a href="./WEEK7.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Classification II</span></a>
   </div>
 </li>
     </ul>
@@ -175,7 +174,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block"><span class="chapter-title">Classification</span></h1>
+<h1 class="title d-none d-lg-block"><span class="chapter-title">Classification II</span></h1>
 </div>
 
 
@@ -192,91 +191,20 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="summary" class="level2">
 <h2 class="anchored" data-anchor-id="summary">Summary</h2>
-<p>Remote sensing images usually contain a lot of information, such as vegetation, sea, buildings, etc. These different classifications of information appear more complex in urban areas. When using remote sensing data for research, it is common to use some classified information instead of all, which is called classified data. The land cover is one of the typical and popular classified data, which is useful for urban planning and Disaster detection. For example, using EO data to detect urban green area achieve the physical accessibility, which improves the efficiency of government monitoring urban expansion and land use <a href="https://www.mdpi.com/2072-4292/13/3/422">(Giuliani et al., 2021)</a>. And in the most cited paper on forest fire, different types of vegetation are detected from Landsat image to identify the flammable trees and obtain a fire hazard map<a href="https://www.sciencedirect.com/science/article/pii/0034425789900230">(Chuvieco and Congalton, 1989)</a>.</p>
-<center>
-<div class="quarto-layout-panel">
-<div class="quarto-layout-row quarto-layout-valign-top">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="Geneva.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Vegetated areas over the Geneva canton for 2019, computed with Sentinel-2 data</figcaption><p></p>
-</figure>
-</div>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="forestfire.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Vegetation map (different colors indicate different types of vegetation)</figcaption><p></p>
-</figure>
-</div>
-</div>
-</div>
-</div>
-</center>
-<p>Sources: <a href="https://www.mdpi.com/2072-4292/13/3/422">Giuliani et al., 2021</a>; <a href="https://www.sciencedirect.com/science/article/pii/0034425789900230">Chuvieco and Congalton, 1989</a></p>
-<p><strong>But how can we extract such information?</strong> This will involve machine learning, which is science of computer modeling of learning process.</p>
-<p><a href="https://en.wikipedia.org/wiki/Machine_learning"><strong>Machine learning (ML)</strong></a> is based on data and it can help us make decisions or predictions without explicit programming, which also known as training. There are many models in machine learning, including the linear regression model that many people are familiar with and some complex models such as tree-based model and neural network. In remote sensing area, tree-based model is mainly used to identiy. image. Tree-based model uses different input variables to make complex decisions, of which classification and regression trees (CART) and random forest models are most commonly used.</p>
-<center>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="ML.png" class="img-fluid figure-img" style="width:120.0%"></p>
-<p></p><figcaption class="figure-caption">Outline of Machine Learning</figcaption><p></p>
-</figure>
-</div>
-</center>
-<p>Created by: Wendi Li</p>
-<p><strong>CART and random forest</strong> are both can predict large amounts of non-linear data, and neither requires pre-processing of <a href="https://dzone.com/articles/cart-and-random-forests">dirty data (null values, outliers, etc.)</a>. The CART model includes classification tree and regression tree, which are used to classify data into several discrete categories and predict continuous dependent variable respectively. In classification tree, it uses Gini Impurity to split the data set to a decision tree, but in regression tree, the sum of squared residuals (SSR) is used. When decision tree is too deep and performing well in training data, overfitting occurs. Therefore, an optimized model called random forest is created to deal with more complex issues. Random forest consists of many decision trees, it uses <a href="https://medium.com/analytics-vidhya/bootstrapping-and-oob-samples-in-random-forests-6e083b6bc341">bootstrapping</a> to randomly draw N times from the data to get N samples (samples can be repeated) and determine the beat option.</p>
+<p>Image analysis is divided into pixel-based and object-based. Pixel-based analysis is the traditional classification method which focuses on separated pixel and spectral information but not detect the boundary. While Object-Based Image Analysis (OBIA) segments the image into some vector images that consist of several small pixels. Segmentation and classification are two principles of OBIA, it firstly segments the image into the meaningful physical objects and then classifies them into different categories according to spectral, geometrical, and spatial properties. Nowadays, <a href="https://gis.stackexchange.com/questions/237461/distinction-between-pixel-based-and-object-based-classification">the vast majority of scholars</a> believe that OBIA has higher accuracy than piexel-based</p>
 <center>
 <div class="quarto-layout-panel">
 <div class="quarto-layout-row quarto-layout-valign-bottom">
-<div class="quarto-layout-cell" style="flex-basis: 63.3%;justify-content: center;">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="classification.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">CART</figcaption><p></p>
-</figure>
+<div class="quarto-layout-cell" style="flex-basis: 42.1%;justify-content: center;">
+<p><img src="feature.png" class="img-fluid"></p>
 </div>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 36.7%;justify-content: center;">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="random.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Random Foreprobabilityst</figcaption><p></p>
-</figure>
-</div>
+<div class="quarto-layout-cell" style="flex-basis: 57.9%;justify-content: center;">
+<p><img src="pixel.png" class="img-fluid"></p>
 </div>
 </div>
 </div>
 </center>
-<p>Sources: <a href="https://www.digitalvidya.com/blog/classification-and-regression-trees/">Digital Vidya</a>; <a href="https://commons.wikimedia.org/wiki/File:Decision_Tree_vs._Random_Forest.png">WIDIMEDIA COMMONS</a></p>
-<p>So far, a new question will be raised: <strong>how do we apply the machine learning to imagery classification in remote sensing?</strong> This will refer to the supervised and unsupervised model and two typical application in remote sensing area.</p>
-<p><strong>Unsupervised classification</strong> does not have any prior information in the classification process and automatically classify data based on the distribution pattern of the spectral features. The methods of unsupervised classification includes K-means clustering, ISODATA algorithm etc., and <a href="https://andrewmaclachlan.github.io/CASA0005repo/detecting-spatial-patterns.html#density-based-spatial-clustering-of-applications-with-noise-dbscan">DBSCAN</a> in GIS is also a similar thing.</p>
-<p><strong>Supervised classification</strong> is an identification method based on known categories in the specific area, which commonly has better accuracy than unsupervised. And this kind of classification always includes <a href="https://andrewmaclachlan.github.io/CASA0023-lecture-6/#69">the same process</a> of class definition, pre-processing, training, pixel assignment and accuracy assessment. Here, we focus on two popularly used methods, Maximum Likelihood Classification(MLC) and Support Vector Machines(SVM). Maximum Likelihood takes the image and assigns pixel to the most probable type, which is based on probability that we set. <a href="https://www.sciencedirect.com/science/article/pii/S0924271610001140">SVM</a> is a linear binary classifiers that assign a given test sample a class from one of the two possible labels, which determines an optimal hyperplane to divide the data set. However, data from different categories are impossibly always separable by linear relationship. Therefore, a model based on kernel trick was proposed by <a href="https://link.springer.com/article/10.1007/BF00994018">Cortes and Vapnik</a> in 1995, which improved the availability.</p>
-<center>
-<div class="quarto-layout-panel">
-<div class="quarto-layout-row quarto-layout-valign-bottom">
-<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="MLC.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Basic concepts of MLC</figcaption><p></p>
-</figure>
-</div>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 66.7%;justify-content: center;">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="SVM.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Two types of SVM</figcaption><p></p>
-</figure>
-</div>
-</div>
-</div>
-</div>
-</center>
-<p>Sources: <a href="https://ieeexplore.ieee.org/document/6909319">Sisodia et al., 2014</a>;<a href="https://ieeexplore.ieee.org/document/9206124">Sheykhmousa et al., 2020</a></p>
+<p>Sources:<a href="https://www.researchgate.net/publication/306364175_Review_of_Automatic_Feature_Extraction_from_High-Resolution_Optical_Sensor_Data_for_UAV-Based_Cadastral_Mapping">Crommelinck et al., 2016</a>; <a href="https://gis.stackexchange.com/questions/103571/the-difference-between-pattern-recognition-and-image-classification-in-remote-se">Stack</a></p>
 
 
 </section>
@@ -417,14 +345,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./WEEK3.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Correction</span></span>
+      <a href="./WEEK6.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Classification</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./WEEK7.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-title">Classification II</span></span> <i class="bi bi-arrow-right-short"></i>
-      </a>
   </div>
 </nav>
 </div> <!-- /content -->
