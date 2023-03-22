@@ -237,7 +237,7 @@ ul.task-list li input[type="checkbox"] {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="random.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Random Forest</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Random Foreprobabilityst</figcaption><p></p>
 </figure>
 </div>
 </div>
@@ -245,7 +245,32 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </center>
 <p>Sources: <a href="https://www.digitalvidya.com/blog/classification-and-regression-trees/">Digital Vidya</a>; <a href="https://commons.wikimedia.org/wiki/File:Decision_Tree_vs._Random_Forest.png">WIDIMEDIA COMMONS</a></p>
-<p>一系列if-else语句</p>
+<p>So far, a new question will be raised: <strong>how do we apply the machine learning to imagery classification in remote sensing?</strong> This will refer to the supervised and unsupervised model and two typical application in remote sensing area.</p>
+<p>Unsupervised classification does not have any prior information in the classification process and automatically classify data based on the distribution pattern of the spectral features. The methods of unsupervised classification includes K-means clustering, ISODATA algorithm etc., and <a href="https://andrewmaclachlan.github.io/CASA0005repo/detecting-spatial-patterns.html#density-based-spatial-clustering-of-applications-with-noise-dbscan">DBSCAN</a> in GIS is also a similar thing.</p>
+<p>Supervised classification is an identification method based on known categories in the specific area, which commonly has better accuracy than unsupervised. And this kind of classification always includes <a href="https://andrewmaclachlan.github.io/CASA0023-lecture-6/#69">the same process</a> of class definition, pre-processing, training, pixel assignment and accuracy assessment. Here, we focus on two popularly used methods, Maximum Likelihood Classification(MLC) and Support Vector Machines(SVM). Maximum Likelihood takes the image and assigns pixel to the most probable type, which is based on probability that we set. <a href="https://www.sciencedirect.com/science/article/pii/S0924271610001140">SVM</a> is a linear binary classifiers that assign a given test sample a class from one of the two possible labels, which determines an optimal hyperplane to divide the data set. However, data from different categories are impossibly always separable by linear relationship. Therefore, a model based on kernel trick was proposed by <a href="https://link.springer.com/article/10.1007/BF00994018">Cortes and Vapnik</a> in 1995, which improved the availability.</p>
+<center>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-bottom">
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="MLC.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Basic concepts of MLC</figcaption><p></p>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 66.7%;justify-content: center;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="SVM.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Two types of SVM</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</center>
+<p>Sources: <a href="https://ieeexplore.ieee.org/document/6909319">Sisodia et al., 2014</a>;<a href="https://ieeexplore.ieee.org/document/9206124">Sheykhmousa et al., 2020</a></p>
 
 
 </section>

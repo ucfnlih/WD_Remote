@@ -26,13 +26,24 @@ Created by: Wendi Li
 ::: {layout-ncol=2 layout-valign="bottom"}
 ![CART](classification.png){width=95%}
 
-![Random Forest](random.png){width=55%}
+![Random Foreprobabilityst](random.png){width=55%}
 :::
 </center>
 Sources: [Digital Vidya](https://www.digitalvidya.com/blog/classification-and-regression-trees/); [WIDIMEDIA COMMONS](https://commons.wikimedia.org/wiki/File:Decision_Tree_vs._Random_Forest.png)
 
+So far, a new question will be raised: **how do we apply the machine learning to imagery classification in remote sensing?** This will refer to the supervised and unsupervised model and two typical application in remote sensing area.
 
 
+**Unsupervised classification** does not have any prior information in the classification process and automatically classify data based on the distribution pattern of the spectral features. The methods of unsupervised classification includes K-means clustering, ISODATA algorithm etc., and [DBSCAN](https://andrewmaclachlan.github.io/CASA0005repo/detecting-spatial-patterns.html#density-based-spatial-clustering-of-applications-with-noise-dbscan) in GIS is also a similar thing.
 
+**Supervised classification** is an identification method based on known categories in the specific area, which commonly has better accuracy than unsupervised. And this kind of classification always includes [the same process](https://andrewmaclachlan.github.io/CASA0023-lecture-6/#69) of class definition, pre-processing, training, pixel assignment and accuracy assessment. Here, we focus on two popularly used methods, Maximum Likelihood Classification(MLC) and Support Vector Machines(SVM). Maximum Likelihood takes the image and assigns pixel to the most probable type, which is based on probability that we set. [SVM](https://www.sciencedirect.com/science/article/pii/S0924271610001140) is a linear binary classifiers that assign a given test sample a class from one of the two possible labels, which determines an optimal hyperplane to divide the data set. However, data from different categories are impossibly always separable by linear relationship. Therefore, a model based on kernel trick was proposed by [Cortes and Vapnik](https://link.springer.com/article/10.1007/BF00994018) in 1995, which improved the availability.
 
+<center>
+::: {layout-ncol=2 layout-valign="bottom"}
+![Basic concepts of MLC](MLC.png){width=30%}
 
+![Two types of SVM](SVM.png){width=60%}
+:::
+</center>
+
+Sources: [Sisodia et al., 2014](https://ieeexplore.ieee.org/document/6909319);[Sheykhmousa et al., 2020](https://ieeexplore.ieee.org/document/9206124)
