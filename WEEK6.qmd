@@ -15,7 +15,24 @@ Sources: [Giuliani et al., 2021](https://www.mdpi.com/2072-4292/13/3/422); [Chuv
 
 **But how can we extract such information?** This will involve machine learning, which is science of computer modeling of learning process.
 
-[Machine learning (ML)](https://en.wikipedia.org/wiki/Machine_learning) is based on data and it can help us make decisions or predictions without explicit programming, which also known as training. There are many models in machine learning, including the linear regression model that many people are familiar with and some complex models such as tree-based model and neural network. In remote sensing area, tree-based model is mainly used to identiy. image. Tree-based model uses different input variables to make complex decisions, of which classification and regression trees (CART) and random forest models are most commonly used.
+[**Machine learning (ML)**](https://en.wikipedia.org/wiki/Machine_learning) is based on data and it can help us make decisions or predictions without explicit programming, which also known as training. There are many models in machine learning, including the linear regression model that many people are familiar with and some complex models such as tree-based model and neural network. In remote sensing area, tree-based model is mainly used to identiy. image. Tree-based model uses different input variables to make complex decisions, of which classification and regression trees (CART) and random forest models are most commonly used.
 
 <center>![Outline of Machine Learning](ML.png){width=120%}</center>
 Created by: Wendi Li
+
+**CART and random forest** are both can predict large amounts of non-linear data, and neither requires pre-processing of [dirty data (null values, outliers, etc.)](https://dzone.com/articles/cart-and-random-forests). The CART model includes classification tree and regression tree, which are used to classify data into several discrete categories and predict continuous dependent variable respectively. In classification tree, it uses Gini Impurity to split the data set to a decision tree, but in regression tree, the sum of squared residuals (SSR) is used. When decision tree is too deep and performing well in training data, overfitting occurs. Therefore, an optimized model called random forest is created to deal with more complex issues. Random forest consists of many decision trees, it uses [bootstrapping](https://medium.com/analytics-vidhya/bootstrapping-and-oob-samples-in-random-forests-6e083b6bc341) to randomly draw N times from the data to get N samples (samples can be repeated) and determine the beat option.
+
+<center>
+::: {layout-ncol=2 layout-valign="bottom"}
+![CART](classification.png){width=95%}
+
+![Random Forest](random.png){width=55%}
+:::
+</center>
+Sources: [Digital Vidya](https://www.digitalvidya.com/blog/classification-and-regression-trees/); [WIDIMEDIA COMMONS](https://commons.wikimedia.org/wiki/File:Decision_Tree_vs._Random_Forest.png)
+
+
+
+
+
+

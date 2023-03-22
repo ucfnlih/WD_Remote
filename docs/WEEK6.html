@@ -211,7 +211,7 @@ ul.task-list li input[type="checkbox"] {
 </center>
 <p>Sources: <a href="https://www.mdpi.com/2072-4292/13/3/422">Giuliani et al., 2021</a>; <a href="https://www.sciencedirect.com/science/article/pii/0034425789900230">Chuvieco and Congalton, 1989</a></p>
 <p><strong>But how can we extract such information?</strong> This will involve machine learning, which is science of computer modeling of learning process.</p>
-<p><a href="https://en.wikipedia.org/wiki/Machine_learning">Machine learning (ML)</a> is based on data and it can help us make decisions or predictions without explicit programming, which also known as training. There are many models in machine learning, including the linear regression model that many people are familiar with and some complex models such as tree-based model and neural network. In remote sensing area, tree-based model is mainly used to identiy. image. Tree-based model uses different input variables to make complex decisions, of which classification and regression trees (CART) and random forest models are most commonly used.</p>
+<p><a href="https://en.wikipedia.org/wiki/Machine_learning"><strong>Machine learning (ML)</strong></a> is based on data and it can help us make decisions or predictions without explicit programming, which also known as training. There are many models in machine learning, including the linear regression model that many people are familiar with and some complex models such as tree-based model and neural network. In remote sensing area, tree-based model is mainly used to identiy. image. Tree-based model uses different input variables to make complex decisions, of which classification and regression trees (CART) and random forest models are most commonly used.</p>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -221,6 +221,31 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </center>
 <p>Created by: Wendi Li</p>
+<p><strong>CART and random forest</strong> are both can predict large amounts of non-linear data, and neither requires pre-processing of <a href="https://dzone.com/articles/cart-and-random-forests">dirty data (null values, outliers, etc.)</a>. The CART model includes classification tree and regression tree, which are used to classify data into several discrete categories and predict continuous dependent variable respectively. In classification tree, it uses Gini Impurity to split the data set to a decision tree, but in regression tree, the sum of squared residuals (SSR) is used. When decision tree is too deep and performing well in training data, overfitting occurs. Therefore, an optimized model called random forest is created to deal with more complex issues. Random forest consists of many decision trees, it uses <a href="https://medium.com/analytics-vidhya/bootstrapping-and-oob-samples-in-random-forests-6e083b6bc341">bootstrapping</a> to randomly draw N times from the data to get N samples (samples can be repeated) and determine the beat option.</p>
+<center>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-bottom">
+<div class="quarto-layout-cell" style="flex-basis: 63.3%;justify-content: center;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="classification.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">CART</figcaption><p></p>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 36.7%;justify-content: center;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="random.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Random Forest</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</center>
+<p>Sources: <a href="https://www.digitalvidya.com/blog/classification-and-regression-trees/">Digital Vidya</a>; <a href="https://commons.wikimedia.org/wiki/File:Decision_Tree_vs._Random_Forest.png">WIDIMEDIA COMMONS</a></p>
+<p>一系列if-else语句</p>
 
 
 </section>
