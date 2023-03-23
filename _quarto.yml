@@ -19,6 +19,8 @@ book:
   repo-url: https://github.com/ucfnlih/WD_Remote.git
   downloads: [pdf, epub]
   sharing: [twitter, facebook]
+  
+number-sections: False
 
 bibliography: references.bib
 
