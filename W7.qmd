@@ -1,0 +1,60 @@
+---
+title: "Classification II"
+---
+## Summary
+
+**Image analysis is divided into pixel-based and object-based.** Pixel-based analysis is the traditional classification method which focuses on separated pixel and spectral information but not detect the boundary. While Object-Based Image Analysis (OBIA) segments the image into some vector images that consist of several small pixels. Segmentation and classification are two principles of OBIA, it firstly segments the image into the meaningful physical objects and then classifies them into different categories according to spectral, geometrical, and spatial properties. Nowadays, [the vast majority of scholars](https://gis.stackexchange.com/questions/237461/distinction-between-pixel-based-and-object-based-classification) believe that OBIA has higher accuracy than pixel-based analysis.
+
+<center>
+
+::: {layout-ncol="2" layout-valign="bottom"}
+![](feature.png){width="80%"}
+
+![](pixel.png){width="110%"}
+:::
+
+</center>
+
+Sources:[Crommelinck et al., 2016](https://www.researchgate.net/publication/306364175_Review_of_Automatic_Feature_Extraction_from_High-Resolution_Optical_Sensor_Data_for_UAV-Based_Cadastral_Mapping); [Stack](https://gis.stackexchange.com/questions/103571/the-difference-between-pattern-recognition-and-image-classification-in-remote-se)
+
+After finishing the implementation part of classification, the assessment/test part should be done to **make sure the accuracy of the results.** So first of all, we should know how to get the test data. A good approach is to split the whole data set into train part and test part, and most people think that the ratio of [80:20](https://www.baeldung.com/cs/train-test-datasets-ratio) is appropriate. After splitting, [cross validation](https://scikit-learn.org/stable/modules/cross_validation.html) should be used to prevent overfitting and gives a more accurate estimate of the model's performance. **However, the original cross validation method is only applicable to non-spatial data, for remote sensing data, the spatial cross validation will be used.**
+
+<center>![Original cross validation](test_train.png){width="90%"}</center>
+
+Source:[scikit-learn](https://scikit-learn.org/stable/modules/cross_validation.html)
+
+In spatial data, two close regions are likely to have a lot of similarities, which may cause [data leakage](https://en.wikipedia.org/wiki/Leakage_(machine_learning)). Using spatial cross validation method, the overfitting in spatial data could be solved. The basic principle of spatial cross validation is to split the data into folds or partitions so that each partition contains a representative sample of the spatial distribution of the data. [*Scikit-learn*](https://towardsdatascience.com/spatial-cross-validation-using-scikit-learn-74cb8ffe0ab9)'s built-in CV functions provide the code to achieve this.
+
+<center>![](spatial_cross.png){width="80%"}</center>
+
+Source: [Lovelace, et al.](https://r.geocompx.org/spatial-cv.html)
+
+![](accuracy.png){width="100%"}
+
+## Application
+
+#### Application of image analysis method comparison: LULC
+
+::: callout-note
+# Paper
+
+Duro, D.C., Franklin, S.E., Dubé, M.G., 2012. **A comparison of pixel-based and object-based image analysis with selected machine learning algorithms for the classification of agricultural landscapes using SPOT-5 HRG imagery**. Remote Sensing of Environment 118, 259--272. https://doi.org/10.1016/j.rse.2011.11.020 [**\[Link\]**](https://www.sciencedirect.com/science/article/pii/S0034425711004172)
+:::
+
+This paper selects the South Saskatchewan River as study area and the land use and land cover (LULC) as study object, applying three supervised machine learning algorithms both in pixel-based and object-based image analysis using SPOT-5 HRG imagery, to compare the performance of them. The three algorithms are decision tree (DT), random forest (RF), and the support vector machine (SVM).
+
+The methodology includes data collection, image correction, image segmentation, object feature selection etc. Here, we focus on "Image segmentation and object feature selection". Segmentation is the first step of object-based analysis. In this study, the multi-resolution segmentation (MRS) algorithm is used to segment image, which let pixel sized objects iteratively grown based on several user-defined parameters (scale, color/shape, smoothness/compactness) to define the size and shape of images. The selection of "scale" parameter is important for MRS algorithm because it will affect the accuracy of the output. The following figure shows the results of different values. After segmentation, classification process will be implemented, which all input layers, segmentation scales and object feature are used.
+
+<center>![Comparison of image segmentation levels used in object-based classification: A) SPOT-5 10 m HRG false color image of study area (R---NIR, G---Red, B---Green); B) Image segmentation (MRS scale 5); C) Image segmentation (MRS scale 15); D) Image segmentation (MRS scale 30)](W7_output.png){width="80%"}</center>
+
+Source: [Duro et al., 2012](https://www.sciencedirect.com/science/article/pii/S0034425711004172)
+
+::: callout-tip
+## My comment on methodology
+
+Here we focus on the methodology of "Image segmentation and object feature selection". In this paper, multi-resolution segmentation (MRS) algorithm is used to segmented. Due to the iterative ways, the results will be more accurate and robust. But one difficult point is that we should choose parameters for each image, this will be a challenge because the wrong selection may result in segmentation errors. And the high requirement of memory and computer will be another challenge when the resource is limited.
+:::
+
+## Personal Reflection
+
+This week, we built on the previous week's learning about classification.
