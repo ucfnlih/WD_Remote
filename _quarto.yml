@@ -30,7 +30,7 @@ comments:
 
 format:
   html:
-    theme: [cosmo,minty]
+    theme: [cosmo]
   pdf:
     documentclass: scrreprt
 
