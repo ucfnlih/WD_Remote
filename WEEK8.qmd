@@ -1,5 +1,0 @@
-# Temperature and Policy
-
-## Summary
-
-Temperature and weather can sometimes bring problems to cities. To which Urban Heat Island (UHI) is one of the most typical issues.
