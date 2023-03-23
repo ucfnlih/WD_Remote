@@ -11,14 +11,14 @@ book:
     - WEEK1.qmd
     - WEEK2.qmd
     - WEEK3.qmd
+    - WEEK4.qmd
     - WEEK6.qmd
     - WEEK7.qmd
+    - WEEK8.qmd
 
   repo-url: https://github.com/ucfnlih/WD_Remote.git
   downloads: [pdf, epub]
   sharing: [twitter, facebook]
-
-number-sections: False
 
 bibliography: references.bib
 

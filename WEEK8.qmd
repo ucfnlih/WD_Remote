@@ -1,0 +1,6 @@
+# Temperature and Policy
+
+## Summary
+Temperature and weather sometime bring issues to cities, such as heat wave and tornadoes. In response, governments and organizations worldwide are actively proposing policies and beginning actions to address environmental issues. Here, we focus on Urban Heat Island (UHI) as an example to show how temperature issue affects cities and how cities react to it.
+
+
