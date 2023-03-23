@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.269">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>week7</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="WEEK7_files/libs/clipboard/clipboard.min.js"></script>
+<script src="WEEK7_files/libs/quarto-html/quarto.js"></script>
+<script src="WEEK7_files/libs/quarto-html/popper.min.js"></script>
+<script src="WEEK7_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="WEEK7_files/libs/quarto-html/anchor.min.js"></script>
+<link href="WEEK7_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="WEEK7_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="WEEK7_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="WEEK7_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="WEEK7_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+
+
+</head>
+
+<body class="fullcontent">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+
+<main class="content" id="quarto-document-content">
+
+
+
+<section id="classification-ii" class="level1">
+<h1>Classification II</h1>
+<section id="summary" class="level2">
+<h2 class="anchored" data-anchor-id="summary">Summary</h2>
+<p><strong>Image analysis is divided into pixel-based and object-based.</strong> Pixel-based analysis is the traditional classification method which focuses on separated pixel and spectral information but not detect the boundary. While Object-Based Image Analysis (OBIA) segments the image into some vector images that consist of several small pixels. Segmentation and classification are two principles of OBIA, it firstly segments the image into the meaningful physical objects and then classifies them into different categories according to spectral, geometrical, and spatial properties. Nowadays, <a href="https://gis.stackexchange.com/questions/237461/distinction-between-pixel-based-and-object-based-classification">the vast majority of scholars</a> believe that OBIA has higher accuracy than pixel-based analysis.</p>
+<center>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-bottom">
+<div class="quarto-layout-cell" style="flex-basis: 42.1%;justify-content: center;">
+<p><img src="feature.png" class="img-fluid"></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 57.9%;justify-content: center;">
+<p><img src="pixel.png" class="img-fluid"></p>
+</div>
+</div>
+</div>
+</center>
+<p>Sources:<a href="https://www.researchgate.net/publication/306364175_Review_of_Automatic_Feature_Extraction_from_High-Resolution_Optical_Sensor_Data_for_UAV-Based_Cadastral_Mapping">Crommelinck et al., 2016</a>; <a href="https://gis.stackexchange.com/questions/103571/the-difference-between-pattern-recognition-and-image-classification-in-remote-se">Stack</a></p>
+<p>After finishing the implementation part of classification, the assessment/test part should be done to <strong>make sure the accuracy of the results.</strong> So first of all, we should know how to get the test data. A good approach is to split the whole data set into train part and test part, and most people think that the ratio of <a href="https://www.baeldung.com/cs/train-test-datasets-ratio">80:20</a> is appropriate. After splitting, <a href="https://scikit-learn.org/stable/modules/cross_validation.html">cross validation</a> should be used to prevent overfitting and gives a more accurate estimate of the model’s performance. <strong>However, the original cross validation method is only applicable to non-spatial data, for remote sensing data, the spatial cross validation will be used.</strong></p>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="test_train.png" class="img-fluid figure-img" style="width:90.0%"></p>
+<p></p><figcaption class="figure-caption">Original cross validation</figcaption><p></p>
+</figure>
+</div>
+</center>
+<p>Source:<a href="https://scikit-learn.org/stable/modules/cross_validation.html">scikit-learn</a></p>
+<p>In spatial data, two close regions are likely to have a lot of similarities, which may cause <a href="https://en.wikipedia.org/wiki/Leakage_(machine_learning)">data leakage</a>. Using spatial cross validation method, the overfitting in spatial data could be solved. The basic principle of spatial cross validation is to split the data into folds or partitions so that each partition contains a representative sample of the spatial distribution of the data. <a href="https://towardsdatascience.com/spatial-cross-validation-using-scikit-learn-74cb8ffe0ab9"><em>Scikit-learn</em></a>’s built-in CV functions provide the code to achieve this.</p>
+<center>
+<img src="spatial_cross.png" class="img-fluid" style="width:80.0%">
+</center>
+<p>Source: <a href="https://r.geocompx.org/spatial-cv.html">Lovelace, et al.</a></p>
+<p><img src="accuracy.png" class="img-fluid" style="width:100.0%"></p>
+</section>
+<section id="application" class="level2">
+<h2 class="anchored" data-anchor-id="application">Application</h2>
+<section id="application-of-image-analysis-method-comparison-lulc" class="level4">
+<h4 class="anchored" data-anchor-id="application-of-image-analysis-method-comparison-lulc">Application of image analysis method comparison: LULC</h4>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Paper
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Duro, D.C., Franklin, S.E., Dubé, M.G., 2012. <strong>A comparison of pixel-based and object-based image analysis with selected machine learning algorithms for the classification of agricultural landscapes using SPOT-5 HRG imagery</strong>. Remote Sensing of Environment 118, 259–272. https://doi.org/10.1016/j.rse.2011.11.020 <a href="https://www.sciencedirect.com/science/article/pii/S0034425711004172"><strong>[Link]</strong></a></p>
+</div>
+</div>
+<p>This paper selects the South Saskatchewan River as study area and the land use and land cover (LULC) as study object, applying three supervised machine learning algorithms both in pixel-based and object-based image analysis using SPOT-5 HRG imagery, to compare the performance of them. The three algorithms are decision tree (DT), random forest (RF), and the support vector machine (SVM).</p>
+<p>The methodology includes data collection, image correction, image segmentation, object feature selection etc. Here, we focus on “Image segmentation and object feature selection”. Segmentation is the first step of object-based analysis. In this study, the multi-resolution segmentation (MRS) algorithm is used to segment image, which let pixel sized objects iteratively grown based on several user-defined parameters (scale, color/shape, smoothness/compactness) to define the size and shape of images. The selection of “scale” parameter is important for MRS algorithm because it will affect the accuracy of the output. The following figure shows the results of different values. After segmentation, classification process will be implemented, which all input layers, segmentation scales and object feature are used.</p>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="W7_output.png" class="img-fluid figure-img" style="width:80.0%"></p>
+<p></p><figcaption class="figure-caption">Comparison of image segmentation levels used in object-based classification: A) SPOT-5 10 m HRG false color image of study area (R—NIR, G—Red, B—Green); B) Image segmentation (MRS scale 5); C) Image segmentation (MRS scale 15); D) Image segmentation (MRS scale 30)</figcaption><p></p>
+</figure>
+</div>
+</center>
+<p>Source: <a href="https://www.sciencedirect.com/science/article/pii/S0034425711004172">Duro et al., 2012</a></p>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+My comment on methodology
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Here we focus on the methodology of “Image segmentation and object feature selection”. In this paper, multi-resolution segmentation (MRS) algorithm is used to segmented. Due to the iterative ways, the results will be more accurate and robust. But one difficult point is that we should choose parameters for each image, this will be a challenge because the wrong selection may result in segmentation errors. And the high requirement of memory and computer will be another challenge when the resource is limited.</p>
+</div>
+</div>
+</section>
+</section>
+<section id="personal-reflection" class="level2">
+<h2 class="anchored" data-anchor-id="personal-reflection">Personal Reflection</h2>
+<p>This week, we built on the previous week’s learning about classification.</p>
+</section>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
