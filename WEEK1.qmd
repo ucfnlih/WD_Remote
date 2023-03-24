@@ -16,7 +16,7 @@ Remote sensing is achieved through sensors, which can be on satellites or mounte
 
 Created by: Wendi Li</br> source:[EOS Data Analytics](https://eos.com/blog/types-of-remote-sensing/); [GISGeography](https://gisgeography.com/passive-active-sensors-remote-sensing/); [Andrew's Pages](https://andrewmaclachlan.github.io/CASA0023-lecture-1/#23)
 
-<br/> Raster data is the most common remote sensing data format, and its encoding methods mainly includes band interleaved by line (BIL), band sequential (BSQ), band interleaved by pixel (BIP) adn GeoTIFF (most common). To measure the quality and potential detail of imagery, four resolutions are used as metrics:
+<br/> Raster data is the most common remote sensing data format, and its encoding methods mainly includes band interleaved by line (BIL), band sequential (BSQ), band interleaved by pixel (BIP) adn GeoTIFF (most common). **To measure the quality and potential detail of imagery, four resolutions are used as metrics:**
 
 -   **Spatial Resolution** <br/> *Size of the raster grid per pixel. Describing how detailed objects are in an image.*
 
@@ -31,7 +31,9 @@ Created by: Wendi Li</br> source:[EOS Data Analytics](https://eos.com/blog/types
 
 -   **Radiometric Resolution**<br/> *The amount of information in each pixel, which refers to the ability of a sensor to identify and show small differences in energy*
 
-::: {layout-nrow="2"}
+<center>
+
+::: {layout-nrow="2" layout-valign="bottom"}
 ![Spatial Resolution](spatial.png)
 
 ![Spectral Resolution](spectral.png)
@@ -39,6 +41,30 @@ Created by: Wendi Li</br> source:[EOS Data Analytics](https://eos.com/blog/types
 ![Temporal Resolution](temporal.png)
 
 ![Radiometric Resolution](radiometric.png)
+
+## Application
+
+#### Application of Landsat Data In Estimating Soil Moisture
+
+::: callout-note
+# Paper
+Li, B., Ti, C., Zhao, Y., Yan, X., 2016. **Estimating Soil Moisture with Landsat Data and Its Application in Extracting the Spatial Distribution of Winter Flooded Paddies**. Remote Sensing 8, 38. https://doi.org/10.3390/rs8010038
+:::
+
+This paper focuses on winter flooded paddies, the purpose is to present a procedure for the extraction of WFP using multi-temporal surface soil moisture content imagery in order to Winter improve the accuracy of agricultural detection.
+
+The methodology related to remote sensing has two parts. In the "Tasseled Cap Transformation" part, a set of 10 consecutive pairs of clear/near cloud-free Landsat Enhanced Thematic Mapper Plus (ETM+) and OLI images are selected and implemented the tasseled Cap transformation to eliminate the impact of scattering (the picture below). In the second part, using the Landsat data to consider the soil moisture estimation.
+
+<center>![Landsat images used for TCT derivation](w1.png){width="80%"}</center>
+
+Source: [Li et al., 2016](https://www.mdpi.com/2072-4292/8/1/38)
+
+::: callout-tip
+## My comment on methodology
+
+:::
+
+</center>
 :::
 
 ## Application
