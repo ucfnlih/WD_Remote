@@ -84,6 +84,11 @@ The results show that these two methods have the similar performance in flat are
 
 Source: Rocchini and Di Rita, 2005
 
+::: callout-tip
+## My comment on methodology
+It may be more accurate if the equations of geometric correction can be of third order or above, but there are some technical difficulties
+:::
+
 ### Application of image merging: the Cabo de Gata-Níjar Natural Park, Spain
 
 ::: callout-note
@@ -105,6 +110,11 @@ There are 5 methods of merging used in this study for testing, which includes IH
 <center>![](5methods.png){width="60%"}</center>
 
 Source: Rigol and Chica-Olmo, 1998
+
+::: callout-tip
+## My comment on methodology
+It may be more accurate if the equations of geometric correction can be of third order or above, but there are some technical difficulties
+:::
 
 ## Personal Reflection
 
