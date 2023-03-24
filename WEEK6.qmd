@@ -2,7 +2,7 @@
 
 ## Summary
 
-Remote sensing images usually contain a lot of information, such as vegetation, sea, buildings, etc. These different classifications of information appear more complex in urban areas. When using remote sensing data for research, it is common to use some classified information instead of all, which is called classified data. The land cover is one of the typical and popular classified data, which is useful for urban planning and Disaster detection. For example, using EO data to detect urban green area achieve the physical accessibility, which improves the efficiency of government monitoring urban expansion and land use [(Giuliani et al., 2021)](https://www.mdpi.com/2072-4292/13/3/422). And in the most cited paper on forest fire, different types of vegetation are detected from Landsat image to identify the flammable trees and obtain a fire hazard map[(Chuvieco and Congalton, 1989)](https://www.sciencedirect.com/science/article/pii/0034425789900230).
+Remote sensing images usually contain a lot of information, such as vegetation, sea, buildings, etc. These different classifications of information appear more complex in urban areas. **When using remote sensing data for research, it is common to use some classified information instead of all, which is called classified data.** The land cover is one of the typical and popular classified data, which is useful for urban planning and Disaster detection. For example, using EO data to detect urban green area achieve the physical accessibility, which improves the efficiency of government monitoring urban expansion and land use [(Giuliani et al., 2021)](https://www.mdpi.com/2072-4292/13/3/422). And in the most cited paper on forest fire, different types of vegetation are detected from Landsat image to identify the flammable trees and obtain a fire hazard map[(Chuvieco and Congalton, 1989)](https://www.sciencedirect.com/science/article/pii/0034425789900230).
 
 <center>
 
@@ -58,11 +58,40 @@ Sources: [Sisodia et al., 2014](https://ieeexplore.ieee.org/document/6909319);[S
 
 ## Application
 
+#### Application of Supervised classification in village building
+
+::: callout-note
+# Paper
+Guo, Z., Shao, X., Xu, Y., Miyazaki, H., Ohira, W., Shibasaki, R., 2016. **Identification of Village Building via Google Earth Images and Supervised Machine Learning Methods**. Remote Sensing 8, 271. https://doi.org/10.3390/rs8040271
+:::
+
+This paper uses supervised machine learning to identify village buildings from open remote sensing data - Google Earth (GE) RGB images. Two specific algorithms are used for classification: adaptive boosting (AdaBoost) and convolutional neural networks (CNN). The purpose of this paper is to compare the performance of these two algorithms. And what I focus on here is the methodology part.
+
+First step for supervised classification is to customize the categories, researches define “village buildings” as any settlement with size less than 2 km here. The next step is to split data set into training data and test data. Four typical village/non-village areas are selected from the original image to be the training data (figure c,d,e,f), and each image is sized 600 × 900 pixels. The test data are contained within the entire area of figure a. After that, two algorithms are applied to the data, and results show that CNN better than AdaBoost.
+
+<center>
+![Dataset for training and testing](village.png){width="80%"}
+</center>
+Source: [Guo et al., 2016](https://www.mdpi.com/2072-4292/8/4/271)
 
 
+::: callout-tip
+## My comment on methodology
+This paper proposes a good research design and complete workflow to compare two ML algorithms based on village buildings. **However, there is a serious issue in splitting training data and testing data.** Researches select 4 areas from figure a as training data and the entire figure a as testing data, which causes data leakage because some data is duplicated. This method error may cause model instability and overfitting, and impact the results.
+:::
 
+## Personal Reflection
+This week I have learned about what is classification in remote sensing and how it is achieved by machine learning. I really liked the logic of this week's lecture, it is progressive and clear:
 
+<center>
+*1. what is classification*</br>
+*2. The basic of machine learning*</br>
+*3. Machine learning apply in image classification*
+</center>
+</br>
+And combining remote sensing, I think I am better understanding how machine learning work. I have learned ML in the previous course, but I still felt a little confused about its application and some concepts, especially the difference between supervised and unsupervised. But using the image classification, all things become clear because it is simple that supervised is assuming that we know the categories and unsupervised is not.
 
+This let me feel the charm of interdisciplinary and knowledge integration, in which we may gain the different understanding of the same method. And the cross-thinking can provide more ideas for our research and benefit our critical thinking.
 
 
 

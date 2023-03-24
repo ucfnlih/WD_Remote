@@ -4,23 +4,22 @@ title: "Google Earth Engine"
 
 ## Summary
 
-[Google Earth Engine (GEE)](https://earthengine.google.com/) is a platform for scientific analysis and visualization of geospatial data sets for academic, public interest, corporate and government users. It is an online software that stores data on servers, and the code is run on the client side - browser. Because of this characteristic, GEE can achieve geospatial analysis with massive data sets within seconds, which gives it a huge advantage. Some terms in GEE have been renamed, for example, the raster and vector data are called "Image" and "Feature" in GEE. And GEE uses the website programming language - Javascript to conduct. 
+[Google Earth Engine (GEE)](https://earthengine.google.com/) is a platform for scientific analysis and visualization of geospatial data sets for academic, public interest, corporate and government users. It is an online software that stores data on servers, and the code is run on the client side - browser. Because of this characteristic, GEE can achieve geospatial analysis with massive data sets within seconds, which gives it a huge advantage. Some terms in GEE have been renamed, for example, the raster and vector data are called "Image" and "Feature" in GEE. And GEE uses the website programming language - Javascript to conduct.
 
-<center>
-![](API.png){width=75%}
-</center>
+<center>![](API.png){width="75%"}</center>
+
 Source: [Bikesh Bade](https://bikeshbade.com.np/tutorials/Detail/?title=Introduction%20to%20the%20Google%20Earth%20Engine%20Python%20API&code=10)
 
 Now, let's turn to begin the GEE in action! The first thing we need to know what GEE code editor looks like and its function. In general, it has four parts: The bottom of the page is the map, which you can slide and mark randomly; the middle of the top is the code editor, the left side of it mainly displays the online project you created and the uploaded files, and the right side is the output area.
 
-<center>
-![](GEE.png){width=80%}
-</center>
+<center>![](GEE.png){width="80%"}</center>
+
 Source: [Andy MacLachlan](https://andrewmaclachlan.github.io/CASA0023-lecture-5/#27)
 
 **After understanding the GEE code editor pages, turning to some methods and coding:**
 
 #### Loading feature collection
+
 If we want to know the geometries and features of an area, we can upload the shapefile and load it, which can output a feature collection (`India`). If we just want the polygon and single point rather than the whole area, we can filter it (`Dheli`).
 
 ```{r, eval=FALSE}
@@ -38,15 +37,19 @@ Map.addLayer(Dheli, {}, "Dheli");
 ```
 
 <center>
+
 ::: {layout-ncol="2" layout-valign="bottom"}
 ![India](india.png){width="30%"}
 
 ![Dheli](Dheli.png){width="30%"}
 :::
+
 </center>
+
 Source: Output from practical, Wendi Li
 
 #### Mosaic images
+
 When we look at images, it may be very apparent differences between the tiles (`spatial mosaic`), which is probably due to the date of collection and the atmospheric correction applied[(Andy MacLachlan)](https://andrewmaclachlan.github.io/CASA0023-lecture-5/#27). To deal with this "mosaic images", we can take the average value (`mean`).
 
 ```{r, eval=FALSE}
@@ -68,15 +71,19 @@ Map.addLayer(meanImage, vis_params2, 'mean');
 ```
 
 <center>
+
 ::: {layout-ncol="2" layout-valign="bottom"}
 ![Before averaging](before.png){width="30%"}
 
 ![After averaging](after.png){width="30%"}
 :::
+
 </center>
+
 Source: Output from practical, Wendi Li
 
 #### Texture measures
+
 [`glcmTexture()` function](https://www.mathworks.com/help/images/texture-analysis-using-the-gray-level-co-occurrence-matrix-glcm.html) calculates the urface reflectance values and extracting statistical measures from this matrix to describe the texture. A important point here is we need to multiple the surface reflectance values to computer or the texture would just be 1s and 0s.
 
 ```{r, eval=FALSE}
@@ -92,9 +99,8 @@ var glcm = clip.select(['SR_B1', 'SR_B2', 'SR_B3', 'SR_B4', 'SR_B5', 'SR_B6', 'S
 Map.addLayer(glcm, {min:14, max: 650}, 'glcm');
 ```
 
-<center>
-![Texture measures](texture.png){width=70%}
-</center>
+<center>![Texture measures](texture.png){width="70%"}</center>
+
 Source: Output from practical, Wendi Li
 
 ## Application
@@ -106,20 +112,18 @@ Source: Output from practical, Wendi Li
 Sulova, A., Jokar Arsanjani, J., 2021. **Exploratory Analysis of Driving Force of Wildfires in Australia: An Application of Machine Learning within Google Earth Engine**. Remote Sensing 13, 10. https://doi.org/10.3390/rs13010010
 :::
 
-The serious wildfires that hit Australia in 2019-2020 summer have sparked scholarly attention to fire prediction models. The purporse of this paper is to develop an automated cloud-based wildfire prediction model that uses free remote sensing data in Google Earth Engine to generate a training data set of wildfire events and injects a machine learning model for this.
+<center>![Defining the interest area of Australian mainland bounds based on GEE](border.png){width="80%"}</center>
 
-Focusing on the methodology, this paper firstly uses the image-based analysis and multi-petabyte of satellite images of GEE to define the interest area of Australian mainland bounds, and then uses the Weather Forecast Reanalysis (ERA5) dataset obtained from GEE to explore the active data. For calculation of the total fire occurrences, the Fire Information for Resource Management System (FIRMS) dataset of GEE is used. After data mining and exploring, machine learning methods is used to build wildfire moedel.
-
-<center>![Comparison of image segmentation levels used in object-based classification: A) SPOT-5 10 m HRG false color image of study area (R---NIR, G---Red, B---Green); B) Image segmentation (MRS scale 5); C) Image segmentation (MRS scale 15); D) Image segmentation (MRS scale 30)](W7_output.png){width="80%"}</center>
-
-Source: [Duro et al., 2012](https://www.sciencedirect.com/science/article/pii/S0034425711004172)
+Source: [Sulova and Jokar Arsanjani, 2021](https://www.mdpi.com/2072-4292/13/1/10)
 
 ::: callout-tip
 ## My comment on methodology
+
 This paper build a wildfire prediction model based on GEE platform. Here, the role of GEE is primarily to provide a large source of complete and free data, and provides a platform for the data-driven modeling. I think this is a typical and good sample for the usage of GEE, which it provides an idea about applying machine learning in GEE and it shows the data advantages that GEE has.
 :::
 
 ## Personal Reflection
-This week I have learned a very useful online platform - Google Earth Engine (GEE). I think the most helpful point of GEE is the convenience of obtaining data because we only need a small amount of code to use the online data, instead of going to different websites (e.g. Landsat, Sentinel) to download data and load it into the software again. In addition, the online operation makes it less storage or space requirements for our computers. Through reading papers, I also known that GEE platform can also be used to support model building. 
+
+This week I have learned a very useful online platform - Google Earth Engine (GEE). I think the most helpful point of GEE is the convenience of obtaining data because we only need a small amount of code to use the online data, instead of going to different websites (e.g. Landsat, Sentinel) to download data and load it into the software again. In addition, the online operation makes it less storage or space requirements for our computers. Through reading papers, I also known that GEE platform can also be used to support model building.
 
 In the later learning and research, I think GEE will be the most strong tool for me. But the biggest difficulty for me at the moment is that I have not used the Javascript language, resulting in I can't understand some codes. Therefore, I will focus on learning the basic programming language in the next step of learning to support the subsequent use.
