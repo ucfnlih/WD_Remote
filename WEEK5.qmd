@@ -76,6 +76,50 @@ Map.addLayer(meanImage, vis_params2, 'mean');
 </center>
 Source: Output from practical, Wendi Li
 
-#### 
+#### Texture measures
+[`glcmTexture()` function](https://www.mathworks.com/help/images/texture-analysis-using-the-gray-level-co-occurrence-matrix-glcm.html) calculates the urface reflectance values and extracting statistical measures from this matrix to describe the texture. A important point here is we need to multiple the surface reflectance values to computer or the texture would just be 1s and 0s.
 
+```{r, eval=FALSE}
+#| echo: true
+var glcm = clip.select(['SR_B1', 'SR_B2', 'SR_B3', 'SR_B4', 'SR_B5', 'SR_B6', 'SR_B7'])
+  .multiply(1000)
+  .toUint16()
+  .glcmTexture({size: 1})
+  .select('SR_.._contrast|SR_.._diss')
+  .addBands(clip);
+  
+// add to the map, but change the range values  
+Map.addLayer(glcm, {min:14, max: 650}, 'glcm');
+```
 
+<center>
+![Texture measures](texture.png){width=70%}
+</center>
+Source: Output from practical, Wendi Li
+
+## Application
+
+#### Application of Google Earth Engine in wildfires model
+
+::: callout-note
+# Paper
+Sulova, A., Jokar Arsanjani, J., 2021. **Exploratory Analysis of Driving Force of Wildfires in Australia: An Application of Machine Learning within Google Earth Engine**. Remote Sensing 13, 10. https://doi.org/10.3390/rs13010010
+:::
+
+The serious wildfires that hit Australia in 2019-2020 summer have sparked scholarly attention to fire prediction models. The purporse of this paper is to develop an automated cloud-based wildfire prediction model that uses free remote sensing data in Google Earth Engine to generate a training data set of wildfire events and injects a machine learning model for this.
+
+Focusing on the methodology, this paper firstly uses the image-based analysis and multi-petabyte of satellite images of GEE to define the interest area of Australian mainland bounds, and then uses the Weather Forecast Reanalysis (ERA5) dataset obtained from GEE to explore the active data. For calculation of the total fire occurrences, the Fire Information for Resource Management System (FIRMS) dataset of GEE is used. After data mining and exploring, machine learning methods is used to build wildfire moedel.
+
+<center>![Comparison of image segmentation levels used in object-based classification: A) SPOT-5 10 m HRG false color image of study area (R---NIR, G---Red, B---Green); B) Image segmentation (MRS scale 5); C) Image segmentation (MRS scale 15); D) Image segmentation (MRS scale 30)](W7_output.png){width="80%"}</center>
+
+Source: [Duro et al., 2012](https://www.sciencedirect.com/science/article/pii/S0034425711004172)
+
+::: callout-tip
+## My comment on methodology
+This paper build a wildfire prediction model based on GEE platform. Here, the role of GEE is primarily to provide a large source of complete and free data, and provides a platform for the data-driven modeling. I think this is a typical and good sample for the usage of GEE, which it provides an idea about applying machine learning in GEE and it shows the data advantages that GEE has.
+:::
+
+## Personal Reflection
+This week I have learned a very useful online platform - Google Earth Engine (GEE). I think the most helpful point of GEE is the convenience of obtaining data because we only need a small amount of code to use the online data, instead of going to different websites (e.g. Landsat, Sentinel) to download data and load it into the software again. In addition, the online operation makes it less storage or space requirements for our computers. Through reading papers, I also known that GEE platform can also be used to support model building. 
+
+In the later learning and research, I think GEE will be the most strong tool for me. But the biggest difficulty for me at the moment is that I have not used the Javascript language, resulting in I can't understand some codes. Therefore, I will focus on learning the basic programming language in the next step of learning to support the subsequent use.
