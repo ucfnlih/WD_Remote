@@ -48,6 +48,7 @@ Created by: Wendi Li</br> source:[EOS Data Analytics](https://eos.com/blog/types
 
 ::: callout-note
 # Paper
+
 Li, B., Ti, C., Zhao, Y., Yan, X., 2016. **Estimating Soil Moisture with Landsat Data and Its Application in Extracting the Spatial Distribution of Winter Flooded Paddies**. Remote Sensing 8, 38. https://doi.org/10.3390/rs8010038
 :::
 
