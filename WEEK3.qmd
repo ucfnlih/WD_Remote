@@ -113,7 +113,7 @@ Source: Rigol and Chica-Olmo, 1998
 
 ::: callout-tip
 ## My comment on methodology
-It may be more accurate if the equations of geometric correction can be of third order or above, but there are some technical difficulties
+The method of multi-step image merging is relatively simple and the merging result is more accurate. However, the difficulty of technology also makes the probability of spectral information error higher, so multiple tests are needed.
 :::
 
 ## Personal Reflection
