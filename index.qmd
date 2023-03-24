@@ -1,19 +1,19 @@
 # Introduction
-<center>
-![](ok.png){width=80%}
-</center>
+
+<center>![](ok.png){width="80%"}</center>
+
 ## WHO AM I ?
 
 ### I am Wendi Li
 
 A master student from Centre for Advanced Spatial Analysis (CASA), UCL. My undergraduate degree is from Guangdong University of Foreign Studies, majoring in logistics management. What motivated me to change my major and enter CASA is my keen interest in data science and urban studies. Now my research interests are focusing on data visualization, web gis and connected environment. I have a love and aspirations for academic research and desire for progress. I would appreciate your comments on my learning diary and welcome you to discuss with me!
 
-**Email:** wendi_li1002@outlook.com / ucfnlih@ucl.ac.uk
+**Email:** wendi_li1002\@outlook.com / ucfnlih\@ucl.ac.uk
 
-### What is this learning dairy about?
+## What is this learning dairy about?
 
-This learning dairy is a weekly notebook of CASA0023 Remotely Sensing Cities and Environments in UCL, which including the basic concepts and knowledge of remote sensing. The basic framework is provided by the lecture of this section, [Andrew Maclachlan](https://github.com/andrewmaclachlan/CASA0023)  
+This learning dairy is a weekly notebook of CASA0023 Remotely Sensing Cities and Environments in UCL, which including the basic concepts and knowledge of remote sensing. The basic framework is provided by the lecture of this section, [Andrew Maclachlan](https://github.com/andrewmaclachlan/CASA0023)
 
-### How to use this learning dairy?
+## How to use this learning dairy?
 
 This learning dairy has totally 8 sections. Each section contains three parts: summary, application and personal reflection apart from section 2 and 4 which focus on Xaringan and policy respectively.
