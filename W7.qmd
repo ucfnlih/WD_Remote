@@ -1,5 +1,5 @@
 ---
-title: "Classification II"
+title: "7 Classification II"
 ---
 
 ## Summary
@@ -31,12 +31,12 @@ In spatial data, two close regions are likely to have a lot of similarities, whi
 Source: [Lovelace, et al.](https://r.geocompx.org/spatial-cv.html)
 
 **After deciding the dataset, accuracy assessment should be implemented.** The basic principle of all [accuracy assessment](https://ecampusontario.pressbooks.pub/remotesensing/chapter/chapter-7-accuracy-assessment/) is to compare the estimated value with the actual value and to quantify the difference between them. In remote sensing area, the estimated value are the classes mapped for each pixel, and the acutal value is the actual ground information in the areas corresponding to each pixel. The first step of accuracy assessment is to create validation data that should be known already. And then put image data and validation data into confusion matrix.
-<center>
-![Confusion Matrix](accuracy.png){width="100%"}
-</center>
+
+<center>![Confusion Matrix](accuracy.png){width="100%"}</center>
+
 Source: [OPEN LIBRARY](https://ecampusontario.pressbooks.pub/remotesensing/chapter/chapter-7-accuracy-assessment/)
 
-[Several metrics](http://gsp.humboldt.edu/olm/Courses/GSP_216/lessons/accuracy/metrics.html) are used to measure accuracy, such as producer’s accuracy, user’s accuracy and overall accuracy that related to accuracy, and errors of commission and errors of omission that related to error. The Kappa Coefficient is a general metric generated from a statistical test. Kappa Coefficient ranges from -1 t0 1, which a value of 0 indicates that the classification is no better than a random classification, a negative number indicates the classification is significantly worse than random and positive value means better.
+[Several metrics](http://gsp.humboldt.edu/olm/Courses/GSP_216/lessons/accuracy/metrics.html) are used to measure accuracy, such as producer's accuracy, user's accuracy and overall accuracy that related to accuracy, and errors of commission and errors of omission that related to error. The Kappa Coefficient is a general metric generated from a statistical test. Kappa Coefficient ranges from -1 t0 1, which a value of 0 indicates that the classification is no better than a random classification, a negative number indicates the classification is significantly worse than random and positive value means better.
 
 ## Application
 
@@ -64,4 +64,4 @@ Here we focus on the methodology of "Image segmentation and object feature selec
 
 ## Personal Reflection
 
-This week, we built on the previous week's learning about classification. I have understood how to decide the training data and testing data, and how to do the accuracy assessment after classification. I think the most interesting part in this week is the spatial cross validation which combining mathematics with spatial analysis. And the accuracy assessment is probably the most difficult part for me because it involves many models and calculations, but I also consider it is an very important part because it is necessary to do some detailed accuracy analysis but not juet put the metrics. So I think I will spend more time learning this part. 
+This week, we built on the previous week's learning about classification. I have understood how to decide the training data and testing data, and how to do the accuracy assessment after classification. I think the most interesting part in this week is the spatial cross validation which combining mathematics with spatial analysis. And the accuracy assessment is probably the most difficult part for me because it involves many models and calculations, but I also consider it is an very important part because it is necessary to do some detailed accuracy analysis but not juet put the metrics. So I think I will spend more time learning this part.

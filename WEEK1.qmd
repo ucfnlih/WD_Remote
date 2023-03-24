@@ -1,4 +1,4 @@
-# Getting start with remote sensing
+# 1 Getting start with remote sensing
 
 This week, we have a preliminary understanding of the concept of remote sensing and how it is implemented. This is the basis for starting out interesting journey of remote sensing!
 
@@ -49,6 +49,7 @@ Created by: Wendi Li</br> source:[EOS Data Analytics](https://eos.com/blog/types
 
 ::: callout-note
 # Paper
+
 Li, B., Ti, C., Zhao, Y., Yan, X., 2016. **Estimating Soil Moisture with Landsat Data and Its Application in Extracting the Spatial Distribution of Winter Flooded Paddies**. Remote Sensing 8, 38. https://doi.org/10.3390/rs8010038
 :::
 
@@ -62,10 +63,12 @@ Source: [Li et al., 2016](https://www.mdpi.com/2072-4292/8/1/38)
 
 ::: callout-tip
 ## My comment on methodology
+
 This paper uses classical Tasseled Cap Transformation to deal with the images, which is a very useful methods to reduce the dimensionality and make it easier to analyze. What's more, TCT can improve the separability of different land cover classes, which makes it distinguish easily. However, TCT can only be corrected for atmosphere, and the paper does not mention other correction methods, which may cause other errors. This is what the study can be improved.
 :::
 
 ## Personal Reflection
-This week I started my formal study of remote sensing, which is a new field for me and I was really excited. The lecture and practical focus on the basics of sensors and remote sensing data. For me, what attracted me most are the Landsat data because of its wide range of data and long time span, which can provide so much information to our research. 
+
+This week I started my formal study of remote sensing, which is a new field for me and I was really excited. The lecture and practical focus on the basics of sensors and remote sensing data. For me, what attracted me most are the Landsat data because of its wide range of data and long time span, which can provide so much information to our research.
 
 I think the landsat data bring me both "opportunities" and challenges. I will have much more data in subsequent study and can explore some problems from an aerial perspective rather than just using panel data. This has greatly broadened my research horizon. But at the same time, I think it is not really easy to be proficient in landsat data, which requires a lot of accumulation and practice. Therefore, the rode of remote sensing is long, but I think more interets would be discovered in the following secetions.

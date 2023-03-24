@@ -1,4 +1,4 @@
-# Correction
+# 3 Correction
 
 ## Summary
 
@@ -84,7 +84,6 @@ The results show that these two methods have the similar performance in flat are
 
 Source: Rocchini and Di Rita, 2005
 
-
 ### Application of image merging: the Cabo de Gata-Níjar Natural Park, Spain
 
 ::: callout-note
@@ -108,9 +107,7 @@ There are 5 methods of merging used in this study for testing, which includes IH
 Source: Rigol and Chica-Olmo, 1998
 
 ## Personal Reflection
+
 This week I have learned about the different types of image correction as well as image merging and enhancement. The biggest feeling I have is that the corrections are hard to understand and some of them are so similar that make me easily confused. Therefore, I made some flow charts to help me thinking more clearly and I found this is really a good methods for learning fragmented concepts and knowledge.
 
 Focusing on the content, I consider what I have learned this week are really useful because correction is the basic step for all the analysis. Although there are some level 2 products that help us save a lot of hassle in handling, we should know about the principles of each methods so that we can explain the results better. Most importantly, if I want to be a PHD or researchers in the future, the level 2 products are not nearly enough.
-
-
-
