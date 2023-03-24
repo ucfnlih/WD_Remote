@@ -40,8 +40,36 @@ Source: [WSROC](https://ghhin.org/wp-content/uploads/Western-Sydney-Turn-Down-th
 
 ## Application
 
+### Strategy: [Heat Actions in Phoenix, Arizona](https://www.phoenix.gov/sustainabilitysite/Pages/Heat-Actions.aspx)
 
+Urban heat islands and high temperatures affect the living quality and even lives of Phoenix's residents. The New York Times reported that a [“relentless and lethal blanket of heat”](https://ahpi.blog/phoenixs-urban-heat-island-effect-is-increasingly-deadly/) had killed 20 people in Phoenix in just a week. A climate justice reporter even commented that ["America’s hottest city is nearly unlivable in summer"](https://www.theguardian.com/us-news/2022/jan/27/phoenix-arizona-hottest-city-cooling-technologies). In the [group presentation](https://ntsuchiyama.github.io/CASA0023_group_presentation/), we discussed how to design a green bus stop project to react to the heat. Here, I will focus on the heat actions that phoenix government proposed and discuss.
 
+**Heat action 1: Heat Relief Network**</br>
+"The Heat Relief Network (Phoenix) offers free water and indoor locations to cool off. Locations on the downloadable map are marked hydration stations and/or cooling refuge locations for anyone needing to get out of the heat." [This action is available from May 1 to September 30.](https://azmag.gov/Programs/Heat-Relief-Network)
 
+<center>
+![Heat Relief Network](heatmap.png){width=80%}
+</center>
+Source: [City of Phoenix](https://www.phoenix.gov/sustainabilitysite/Pages/Heat-Actions.aspx)
+
+::: callout-tip
+## Discussion
+This is a very useful measure that allows people suffering from the heat to quickly know the nearest free water and indoor place, minimizing the damage caused by the heat. But website does not mention about how to access to this map, and I think this would be a very noteworthy point because user-friendly for all ages should be ensured. What's more, if this network could be available for the whole year would be better.
+:::
+
+**Heat action 2: The Cool Pavement Pilot Program**</br>
+"The Cool Pavement Pilot Project launched in 2018 with test projects in selected portions of eight neighborhoods and one city park to receive cool pavement treatment as part of a pilot project. And new projects have been initiatiated in 2021 to test alternative coating materials."
+
+<center>
+![Cool Pavement](cool.png){width=80%}
+</center>
+Source: [City of Phoenix](https://www.phoenix.gov/sustainabilitysite/Pages/Heat-Actions.aspx)
+
+::: callout-tip
+## Discussion
+The best point in this action is that it is honestly testing and improving the schemes rather than just planning. In September 2021, the Phoenix Street Transportation Department and Office of Sustainability discussed the results of the first year and affirmed its usefulness and operability. In October 2021, [the pilot program ended and cool pavement becomes a regular program.](https://www.phoenix.gov/streets/coolpavement)
+:::
+
+## Personal Reflection
 
 

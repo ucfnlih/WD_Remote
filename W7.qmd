@@ -1,6 +1,7 @@
 ---
 title: "Classification II"
 ---
+
 ## Summary
 
 **Image analysis is divided into pixel-based and object-based.** Pixel-based analysis is the traditional classification method which focuses on separated pixel and spectral information but not detect the boundary. While Object-Based Image Analysis (OBIA) segments the image into some vector images that consist of several small pixels. Segmentation and classification are two principles of OBIA, it firstly segments the image into the meaningful physical objects and then classifies them into different categories according to spectral, geometrical, and spatial properties. Nowadays, [the vast majority of scholars](https://gis.stackexchange.com/questions/237461/distinction-between-pixel-based-and-object-based-classification) believe that OBIA has higher accuracy than pixel-based analysis.
