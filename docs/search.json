@@ -30,21 +30,21 @@
   {
     "objectID": "WEEK1.html#summary",
     "href": "WEEK1.html#summary",
-    "title": "Getting star with remote sensing",
+    "title": "Getting start with remote sensing",
     "section": "Summary",
     "text": "Summary\nRemote sensing is the acquisition of information about an object or phenomenon without making physical contact with the object (from a distance), which is one of the specific methods of Earth observation. Remote sensing is an interesting and useful field with mass of data, it can detect the urban phenomena from a broader perspective and support for policy development. However, satellites also bring space junk. According to statistics, there are 3,000 dead satellites and around 34,000 pieces bigger than 10 centimetres in size littering space, which increases the hitting risk.\n\nSource: GisGeography\nRemote sensing is achieved through sensors, which can be on satellites or mounted on aircraft. There are two main categories of remote sensors, active sensors and passive sensors. Passive sensors receive and detect electromagnetic waves emitted by the target itself or reflected radiation from nature, with no emission source of its own. While active sensors emit electromagnetic waves to the target, which in turn receives their reflection. Each sensor has its own strengths and weaknesses (Figure 1), and using them in combination typically results in more accurate prediction data.\n\n\n\n\nTwo Types Of Sensors\n\n\n\nCreated by: Wendi Li source:EOS Data Analytics; GISGeography; Andrew’s Pages\n Raster data is the most common remote sensing data format, and its encoding methods mainly includes band interleaved by line (BIL), band sequential (BSQ), band interleaved by pixel (BIP) adn GeoTIFF (most common). To measure the quality and potential detail of imagery, four resolutions are used as metrics:\n\nSpatial Resolution  Size of the raster grid per pixel. Describing how detailed objects are in an image.\nSpectral Resolution Number and size of bands that a remote sensing platform can capture\n\nWavelength\nSpectral signature (discrete or continuous)\nConstrained to atmospheric windows\nMeasuring spectral reflectance - spectroradiometer\n\nTemporal Resolution Revisit time of sensor, which refers to the frequency at which imagery is recorded for a particular area.\nRadiometric Resolution The amount of information in each pixel, which refers to the ability of a sensor to identify and show small differences in energy\n\n\n\n\n\n\n\nSpatial Resolution\n\n\n\n\n\n\n\nSpectral Resolution\n\n\n\n\n\n\n\n\n\nTemporal Resolution\n\n\n\n\n\n\n\nRadiometric Resolution"
   },
   {
     "objectID": "WEEK1.html#application",
     "href": "WEEK1.html#application",
-    "title": "Getting star with remote sensing",
+    "title": "Getting start with remote sensing",
     "section": "Application",
     "text": "Application"
   },
   {
     "objectID": "WEEK1.html#reflection",
     "href": "WEEK1.html#reflection",
-    "title": "Getting star with remote sensing",
+    "title": "Getting start with remote sensing",
     "section": "Reflection",
     "text": "Reflection"
   },
@@ -236,5 +236,12 @@
     "title": "Temperature and Policy",
     "section": "Personal Reflection",
     "text": "Personal Reflection\nThis week I have learned about how policies apply in urban issues, especially for temperature. There are many samples and cases provided in the slides, which deeply broadened my knowledge system. After reading such amount of policies and strategies, I have two thoughts:\nThe first one is, although there are many similarities in problems and solutions between cities, I found that all metropolitan policy reveal that they are very well adapted to themselves. For example, if a city is very dry, its cool action may more focus on planting trees rather than build cool equipments. This is why we need global policies for guidance, but also need the adapted local policies.\nThe second one is I realized that the official policies do not mean absolute correctness. We need to maintain critical and objective to think rationally about the strengths and weaknesses of each policy and strategy, and use expertise to discuss and enhance it, only then can urban problems be better solved."
+  },
+  {
+    "objectID": "WEEK5.html#summary",
+    "href": "WEEK5.html#summary",
+    "title": "Google Earth Engine",
+    "section": "Summary",
+    "text": "Summary\nGoogle Earth Engine (GEE) is a platform for scientific analysis and visualization of geospatial data sets for academic, public interest, corporate and government users. It is an online software that stores data on servers, and the code is run on the client side - browser. Because of this characteristic, GEE can achieve geospatial analysis with massive data sets within seconds, which gives it a huge advantage. Some terms in GEE have been renamed, for example, the raster and vector data are called “Image” and “Feature” in GEE. And GEE uses the website programming language - Javascript to conduct.\n\n\n\nSource: Bikesh Bade\nNow, let’s turn to begin the GEE in action! The first thing we need to know what GEE code editor looks like and its function. In general, it has four parts: The bottom of the page is the map, which you can slide and mark randomly; the middle of the top is the code editor, the left side of it mainly displays the online project you created and the uploaded files, and the right side is the output area.\n\n\n\nSource: Andy MacLachlan\nAfter understanding the GEE code editor pages, turning to some methods and coding.\n\nLoading feature collection\nIf we want to know the geometries and features of an area, we can upload the shapefile and load it, which can output a feature collection (India). If we just want the polygon and single point rather than the whole area, we can filter it (Dheli).\n\n// Loading a feature collection\nvar India = ee.FeatureCollection('projects/ee-lwdfish/assets/gadm41_IND_2')\nprint(India, \"India\");\nMap.addLayer(India, {}, \"India\");\n\n//Loading just one polygon for point\nvar Dheli = ee.FeatureCollection('projects/ee-lwdfish/assets/gadm41_IND_2')\n    .filter('GID_1 == \"IND.25_1\"');\nprint(Dheli, \"Dheli\");\nMap.addLayer(Dheli, {}, \"Dheli\");\n\n\n\n\n\n\n\n\nIndia\n\n\n\n\n\n\n\nDheli\n\n\n\n\n\n\nSource: output from Wendi Li\n\n\nMosaic images\nWhen we look at images, it may be very apparent differences between the tiles (spatial mosaic), which is probably due to the date of collection and the atmospheric correction applied(Andy MacLachlan). To deal with this “mosaic images”, we can take the average value (mean).\n\n// Before averaging: Mosaic images\nvar mosaic = oneimage_study_area_cloud_scale.mosaic();\nvar vis_params2 = {\n  bands: ['SR_B4', 'SR_B3', 'SR_B2'],\n  min: 0.0,\n  max: 0.3,\n};\nMap.addLayer(mosaic, vis_params2, 'spatial mosaic');\n\n// After averaging\nvar meanImage = oneimage_study_area_cloud_scale.mean();\n\nMap.addLayer(meanImage, vis_params2, 'mean');\n\n\n\n\n\n\n\n\nBefore averaging\n\n\n\n\n\n\n\nAfter averaging\n\n\n\n\n\n\nSource: output from Wendi Li"
   }
 ]
