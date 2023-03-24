@@ -2,7 +2,7 @@
 title: "Temperature and Policy"
 ---
 
-# Summary
+## Summary
 Temperature and weather sometime bring issues to cities, such as heat wave and tornadoes. In response, governments and organizations worldwide are actively proposing policies and beginning actions to address environmental issues. Here, we focus on Urban Heat Island (UHI) as an example to show how temperature issue affects cities and how cities react to it.
 
 [Urban heat island effect](https://www.epa.gov/green-infrastructure/reduce-urban-heat-island-effect) is a phenomenon in which the temperature in urban centers is significantly higher than in the surrounding rural areas. This is because of dense urban roads and buildings that are more likely to absorb heat, and the lack of vegetation that cools the environment. Urban heat island could cause many problem in cities, in terms of both economy and life. In Europe, [over 4% of summer mortality](https://www.sciencedaily.com/releases/2023/01/230131193752.htm) is due to high temperature. And [some studies](https://www.nature.com/articles/nclimate3301.pdf) show that high green house gas will cause a higher percent GDP lost. 
@@ -15,17 +15,30 @@ Source: [ISGlobal](https://www.isglobal.org/en/-/4-of-summer-mortality-is-attrib
 
 Many global, metropolitan, local policies are made to deal with the city problems, however, are they all truly effective and implemented? The answer is no. In fact, some of them are not well thought out:
 
-**Problem: Too much information**
+**Problem 1: Too much information</br>**
 *Sample: [Beating the Heat: A Sustainable Cooling Handbook for Cities](https://reliefweb.int/report/world/beating-heat-sustainable-cooling-handbook-cities?gclid=Cj0KCQjw8e-gBhD0ARIsAJiDsaXtcYoqG7minY9QwmcVCRlQrqNrYPnOb-VzNS4OvPyMedvhxun1sd4aAg4FEALw_wcB)*
 
 Beating the Heat is offers city planners an encyclopaedia of proven options to deal with urban heat, which includes [80 supporting case studies and totally 208 pages](https://www.unep.org/resources/report/beating-heat-sustainable-cooling-handbook-cities). As the first guide for new planner, the odds is they will not read and engage with all of them. So the better way is to use baseline assessment to classify and simplify.
 
-**Problem: No specific consideration**
+<center>
+![Beating the Heat: A Sustainable Cooling Handbook for Cities](beat.png){width=80%}
+</center>
+Source:[UPSC](https://www.adda247.com/upsc-exam/beating-the-heat-a-sustainable-cooling-handbook-for-cities/)
+
+**Problem 2: No specific consideration</br>**
 *Sample: [Western Sydney: Turn Down the Heat Strategy and Action, 2018](https://ghhin.org/wp-content/uploads/Western-Sydney-Turn-Down-the-Heat-Strategy-and-Action-Plan-2018-1.pdf)*
 
-To react the urban heat in Western Sydney, "Turn Down the Heat Strategy and Action" was published in 2018. An some in-depth assessments had already been taken place, including the future of urban heat in Western Sydney and the impact of high temperature on human, economy and buildings. However, it is also listed in the Beating the Heat guide, which means that it wasn't really implemented until 2021. 
+To react the urban heat in Western Sydney, "Turn Down the Heat Strategy and Action" was published in 2018. An some in-depth assessments had already been taken place, including the future of urban heat in Western Sydney and the impact of high temperature on human, economy and buildings. However, it is also listed in the Beating the Heat guide, which means that it wasn't really implemented until 2021. This leads one to question: is the policy plan really just a plan?
+
+In my opinion, this is majorly due to the strategy does not provide specific steps and methods for implementation. For example, what is the workflow and timeline of the action? And who will be involved in this action and what are their respective responsibilities? If thees specific things do not mention in the plan, the action will lack of guiding and performability and finally vacant.
+
+<center>
+![Beating the Heat: A Sustainable Cooling Handbook for Cities](sydney.png){width=80%}
+</center>
+Source: [WSROC](https://ghhin.org/wp-content/uploads/Western-Sydney-Turn-Down-the-Heat-Strategy-and-Action-Plan-2018-1.pdf)
 
 
+## Application
 
 
 

@@ -3,80 +3,65 @@
 ## Summary
 
 ### Policy: [Zero Emission Tokyo Strategy](https://www.kankyo.metro.tokyo.lg.jp/en/about_us/zero_emission_tokyo/strategy.files/Full-ver.ZE-strategy0311.pdf)
-</br>
-[Tokyo](https://en.wikipedia.org/wiki/Tokyo) is a city located at the head of Tokyo Bay, which is the capital and the most populous city of Japan. Tokyo always has a hot and humid climate, but With the urban expansion and global warming, the impact of climate is becoming more and more serious and even threatening people's lives. In 2018, temperatures in Tokyo firstly reached 40 ºC and there were 29 consecutive days with temperature over 30 ºC in 2019. And the natural disasters such as rainstorm and tornado are occurring frequently. **To deal with such climate problems, "Zero Emission Tokyo Strategy" was published in December 2019.** 
 
-<center>
-![](3steps.png){width=80%}
-</center>
-Source: [Zero Emission Tokyo Strategy](https://www.kankyo.metro.tokyo.lg.jp/en/about_us/zero_emission_tokyo/strategy.files/Full-ver.ZE-strategy0311.pdf)
-</br>
-The Zero Emission Tokyo Strategy is a Climate Action Plan that aims to achieve net zero CO2 emissions by 2050, and it also [incorporates sustainable resource management into policies that contribute to reducing emissions even outside the city](https://www.c40.org/case-studies/zero-emission-tokyo-strategy/). The strategy focuses on reducing CO2 emissions and avoiding climate impacts, which is divided into three main steps in 2019, 2030 and 2050 respectively. Totally 14 specific policies are proposed in this action, here, I mainly focus on **two of them** that related to remote sensing:
-</br>
+</br> [Tokyo](https://en.wikipedia.org/wiki/Tokyo) is a city located at the head of Tokyo Bay, which is the capital and the most populous city of Japan. Tokyo always has a hot and humid climate, but With the urban expansion and global warming, the impact of climate is becoming more and more serious and even threatening people's lives. In 2018, temperatures in Tokyo firstly reached 40 ºC and there were 29 consecutive days with temperature over 30 ºC in 2019. And the natural disasters such as rainstorm and tornado are occurring frequently. **To deal with such climate problems, "Zero Emission Tokyo Strategy" was published in December 2019.**
 
-- [**Policy 3: Expansion of Zero Emission Buildings**](https://www.kankyo.metro.tokyo.lg.jp/en/about_us/zero_emission_tokyo/strategy.files/Full-ver.ZE-strategy0311.pdf)
+<center>![](3steps.png){width="80%"}</center>
 
-  + *Key targets for 2030:*
-      - *Reduce greenhouse gas emissions by 30% compared to 2000*
-      - *Reduce energy consumption by 38% compared to 2000*
-      - *Increase renewable power usage to 30%*
-  + *Vision for 2050:*
-      - *Have all buildings in Tokyo be zero-emission buildings that account for adaptation measures such as disaster prevention and heat countermeasures*
+Source: [Zero Emission Tokyo Strategy](https://www.kankyo.metro.tokyo.lg.jp/en/about_us/zero_emission_tokyo/strategy.files/Full-ver.ZE-strategy0311.pdf) </br> The Zero Emission Tokyo Strategy is a Climate Action Plan that aims to achieve net zero CO2 emissions by 2050, and it also [incorporates sustainable resource management into policies that contribute to reducing emissions even outside the city](https://www.c40.org/case-studies/zero-emission-tokyo-strategy/). The strategy focuses on reducing CO2 emissions and avoiding climate impacts, which is divided into three main steps in 2019, 2030 and 2050 respectively. Totally 14 specific policies are proposed in this action, here, I mainly focus on **two of them** that related to remote sensing: </br>
 
+-   [**Policy 3: Expansion of Zero Emission Buildings**](https://www.kankyo.metro.tokyo.lg.jp/en/about_us/zero_emission_tokyo/strategy.files/Full-ver.ZE-strategy0311.pdf)
 
-- [**Policy 8: Fluorocarbons**](https://www.kankyo.metro.tokyo.lg.jp/en/about_us/zero_emission_tokyo/strategy.files/Full-ver.ZE-strategy0311.pdf)
+    -   *Key targets for 2030:*
+        -   *Reduce greenhouse gas emissions by 30% compared to 2000*
+        -   *Reduce energy consumption by 38% compared to 2000*
+        -   *Increase renewable power usage to 30%*
+    -   *Vision for 2050:*
+        -   *Have all buildings in Tokyo be zero-emission buildings that account for adaptation measures such as disaster prevention and heat countermeasures*
 
-  + *Key targets for 2030:*
-    - *Reduce hydrofluorocarbons (HFCs) emissions by 35% compared to FY 2014*
-  + *Vision for 2050:*
-    - *Realize zero fluorocarbon emissions by expanding the use of non-fluorocarbon equipment and strictly controlling equipment to prevent leakage of fluorocarbons during use and disposal.*
-    
-    
+-   [**Policy 8: Fluorocarbons**](https://www.kankyo.metro.tokyo.lg.jp/en/about_us/zero_emission_tokyo/strategy.files/Full-ver.ZE-strategy0311.pdf)
+
+    -   *Key targets for 2030:*
+        -   *Reduce hydrofluorocarbons (HFCs) emissions by 35% compared to FY 2014*
+    -   *Vision for 2050:*
+        -   *Realize zero fluorocarbon emissions by expanding the use of non-fluorocarbon equipment and strictly controlling equipment to prevent leakage of fluorocarbons during use and disposal.*
+
 ## Application
 
 Remotely sensed data can provide some aerial information that is difficult to obtain, for example, green space within a city and the CO2 emissions in the air. Therefore, it always be applied in policy making or city monitoring. In this case, data from sensors LiDAR and SCISAT can be applied in policy 3 and policy 8 in Zero Emission Tokyo Strategy. The specific application process are as following, which uses 5 questions to structure:
 
 #### Application of Policy 3: Expansion of Zero Emission Buildings
-<center>
-![](zero.png){width=80%}
-</center>
+
+<center>![](zero.png){width="80%"}</center>
+
 Source: [Zero Emission Tokyo Strategy](https://www.kankyo.metro.tokyo.lg.jp/en/about_us/zero_emission_tokyo/strategy.files/Full-ver.ZE-strategy0311.pdf)
 
-- **What is the target and action?**
-  + **Target:** Reducing the emission that buildings produce.
-  + **Action:** Promoting the installation of renewable energy equipment, such as solar panels.
-  
-- **What should government know?**
-  + Whether a building is suitable for installing solar energy equipment.
-  + The return on solar investment.
-  
-- **What remotely sensed data and approach can be used?**
-  + **Typical representative:** [ABSOLAR](https://www.absolar.co.uk/)
-  + **Data:** LiDAR data set (3D point clouds, building heights and shapes, solar radiation value etc.)
-  + **Approach:**Using LiDAR data to developing high resolution 3D model of an entire urban area, and then using computer vision technology to recognise roof structures, roof objects, and skylights. Combining these two outputs to identify optimal rooftop areas, including shading analysis. The conclusion about whether a building is the suitable one could be decided until this step. In the last step, big Data analytics and data links would be uesd to explore the rate of return.
+-   **What is the target and action?**
+    -   **Target:** Reducing the emission that buildings produce.
+    -   **Action:** Promoting the installation of renewable energy equipment, such as solar panels.
+-   **What should government know?**
+    -   Whether a building is suitable for installing solar energy equipment.
+    -   The return on solar investment.
+-   **What remotely sensed data and approach can be used?**
+    -   **Typical representative:** [ABSOLAR](https://www.absolar.co.uk/)
+    -   **Data:** LiDAR data set (3D point clouds, building heights and shapes, solar radiation value etc.)
+    -   **Approach:**Using LiDAR data to developing high resolution 3D model of an entire urban area, and then using computer vision technology to recognise roof structures, roof objects, and skylights. Combining these two outputs to identify optimal rooftop areas, including shading analysis. The conclusion about whether a building is the suitable one could be decided until this step. In the last step, big Data analytics and data links would be uesd to explore the rate of return.
 
 #### Application of Policy 8: Fluorocarbons
-<center>
-![](HFCs.png){width=90%}
-</center>
 
-- **What is the target and actions?**
-  + **Target:** Reducing hydrofluorocarbons (HFCs) emissions.
-  + **Action:** Expanding the use of non-fluorocarbon equipment.
+<center>![](HFCs.png){width="90%"}</center>
 
-- **What should government know?**
-  + Monitoring the changes of drofluorocarbons (HFCs) emissions.
+-   **What is the target and actions?**
+    -   **Target:** Reducing hydrofluorocarbons (HFCs) emissions.
+    -   **Action:** Expanding the use of non-fluorocarbon equipment.
+-   **What should government know?**
+    -   Monitoring the changes of drofluorocarbons (HFCs) emissions.
+-   **What remotely sensed data and approach can be used?**
+    -   **Data:** ACE data set
+    -   **Approach:** The Atmospheric Chemistry Experiment (ACE) on [SCISAT](https://www.asc-csa.gc.ca/eng/satellites/scisat/about.asp) was launched into a high-inclination orbit which can bring them to many regions of Earth, then using [ACE FTS](https://ui.adsabs.harvard.edu/abs/2021JGRD..12633208H/abstract) (Atmospheric Chemistry Experiment Fourier Transform Spectrometer) to measure.
 
-- **What remotely sensed data and approach can be used?**
-  + **Data:** ACE data set 
-  + **Approach:** The Atmospheric Chemistry Experiment (ACE) on [SCISAT](https://www.asc-csa.gc.ca/eng/satellites/scisat/about.asp) was launched into a high-inclination orbit which can bring them to many regions of Earth, then using [ACE FTS](https://ui.adsabs.harvard.edu/abs/2021JGRD..12633208H/abstract) (Atmospheric Chemistry Experiment Fourier Transform Spectrometer) to measure.
-  
 ## Personal Reflection
 
 This week I have learned about how remotely sensed data apply in city planning, policy decision, action monitoring etc. This is really new to me because I have never thought about such methods to detect the urban phenomenon. What attracts me most is the case of drought - The California Department of Water Resources (CADWR) used Sentinel moisture index to spot who is watering over the limitation. This example makes me feel the power of remote sensing, which can not only identify phenomena on a large scale but can also for precise house. The even more advanced point is that it can also identify properties hidden in the soil.
 
 What I have learned from this week could give me strong support for future research or work.The combination of remotely sensed data and policy provides a complete knowledge hierarchy for me, which gives me a new understanding of both urban and global policy proposals. These will be the basics for my research on urban study. But one important thing is the policy making is definitely based on local situation and it will be adjusting. So if I really want to be a researcher who is familiar with urban policy and remote sensing data, more policy and literature should be read, it will be a long road.
-
-
-
-
