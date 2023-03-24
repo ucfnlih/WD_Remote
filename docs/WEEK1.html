@@ -183,7 +183,7 @@ ul.task-list li input[type="checkbox"] {
   <ul>
   <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary">Summary</a></li>
   <li><a href="#application" id="toc-application" class="nav-link" data-scroll-target="#application">Application</a></li>
-  <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection">Reflection</a></li>
+  <li><a href="#personal-reflection" id="toc-personal-reflection" class="nav-link" data-scroll-target="#personal-reflection">Personal Reflection</a></li>
   </ul>
 </nav>
     </div>
@@ -223,7 +223,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </center>
 <p>Created by: Wendi Li<br> source:<a href="https://eos.com/blog/types-of-remote-sensing/">EOS Data Analytics</a>; <a href="https://gisgeography.com/passive-active-sensors-remote-sensing/">GISGeography</a>; <a href="https://andrewmaclachlan.github.io/CASA0023-lecture-1/#23">Andrew’s Pages</a></p>
-<p><br> Raster data is the most common remote sensing data format, and its encoding methods mainly includes band interleaved by line (BIL), band sequential (BSQ), band interleaved by pixel (BIP) adn GeoTIFF (most common). To measure the quality and potential detail of imagery, four resolutions are used as metrics:</p>
+<p><br> Raster data is the most common remote sensing data format, and its encoding methods mainly includes band interleaved by line (BIL), band sequential (BSQ), band interleaved by pixel (BIP) adn GeoTIFF (most common). <strong>To measure the quality and potential detail of imagery, four resolutions are used as metrics:</strong></p>
 <ul>
 <li><p><strong>Spatial Resolution</strong> <br> <em>Size of the raster grid per pixel. Describing how detailed objects are in an image.</em></p></li>
 <li><p><strong>Spectral Resolution</strong><br> <em>Number and size of bands that a remote sensing platform can capture</em><br></p>
@@ -236,6 +236,7 @@ ul.task-list li input[type="checkbox"] {
 <li><p><strong>Temporal Resolution</strong><br> <em>Revisit time of sensor, which refers to the frequency at which imagery is recorded for a particular area.</em></p></li>
 <li><p><strong>Radiometric Resolution</strong><br> <em>The amount of information in each pixel, which refers to the ability of a sensor to identify and show small differences in energy</em></p></li>
 </ul>
+<center>
 <div class="quarto-layout-panel">
 <div class="quarto-layout-row quarto-layout-valign-bottom">
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
@@ -274,12 +275,54 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </div>
-</section>
+</center></section>
 <section id="application" class="level2">
 <h2 class="anchored" data-anchor-id="application">Application</h2>
+<section id="application-of-landsat-data-in-estimating-soil-moisture" class="level4">
+<h4 class="anchored" data-anchor-id="application-of-landsat-data-in-estimating-soil-moisture">Application of Landsat Data In Estimating Soil Moisture</h4>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Paper
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Li, B., Ti, C., Zhao, Y., Yan, X., 2016. <strong>Estimating Soil Moisture with Landsat Data and Its Application in Extracting the Spatial Distribution of Winter Flooded Paddies</strong>. Remote Sensing 8, 38. https://doi.org/10.3390/rs8010038</p>
+</div>
+</div>
+<p>This paper focuses on winter flooded paddies, the purpose is to present a procedure for the extraction of WFP using multi-temporal surface soil moisture content imagery in order to Winter improve the accuracy of agricultural detection.</p>
+<p>The methodology related to remote sensing has two parts. In the “Tasseled Cap Transformation” part, a set of 10 consecutive pairs of clear/near cloud-free Landsat Enhanced Thematic Mapper Plus (ETM+) and OLI images are selected and implemented the tasseled Cap transformation to eliminate the impact of scattering (the picture below). In the second part, using the Landsat data to consider the soil moisture estimation.</p>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="w1.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<p></p><figcaption class="figure-caption">Landsat images used for TCT derivation</figcaption><p></p>
+</figure>
+</div>
+</center>
+<p>Source: <a href="https://www.mdpi.com/2072-4292/8/1/38">Li et al., 2016</a></p>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+My comment on methodology
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>This paper uses classical Tasseled Cap Transformation to deal with the images, which is a very useful methods to reduce the dimensionality and make it easier to analyze. What’s more, TCT can improve the separability of different land cover classes, which makes it distinguish easily. However, TCT can only be corrected for atmosphere, and the paper does not mention other correction methods, which may cause other errors. This is what the study can be improved.</p>
+</div>
+</div>
 </section>
-<section id="reflection" class="level2">
-<h2 class="anchored" data-anchor-id="reflection">Reflection</h2>
+</section>
+<section id="personal-reflection" class="level2">
+<h2 class="anchored" data-anchor-id="personal-reflection">Personal Reflection</h2>
+<p>This week I started my formal study of remote sensing, which is a new field for me and I was really excited. The lecture and practical focus on the basics of sensors and remote sensing data. For me, what attracted me most are the Landsat data because of its wide range of data and long time span, which can provide so much information to our research.</p>
+<p>I think the landsat data bring me both “opportunities” and challenges. I will have much more data in subsequent study and can explore some problems from an aerial perspective rather than just using panel data. This has greatly broadened my research horizon. But at the same time, I think it is not really easy to be proficient in landsat data, which requires a lot of accumulation and practice. Therefore, the rode of remote sensing is long, but I think more interets would be discovered in the following secetions.</p>
 
 
 </section>
