@@ -1,5 +1,7 @@
 # Introduction
-
+<center>
+![](ok.png){width=80%}
+</center>
 ## WHO AM I ?
 
 ### I am Wendi Li
