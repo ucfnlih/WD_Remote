@@ -116,7 +116,7 @@
     "href": "index.html#who-am-i",
     "title": "Wendi’s Learning Diary",
     "section": "WHO AM I ?",
-    "text": "WHO AM I ?"
+    "text": "WHO AM I ?\nMy name is Wendi Li, I am a master student on Centre for Advanced Spatial Analysis (CASA), UCL"
   },
   {
     "objectID": "WEEK2.html#slides",
@@ -257,5 +257,12 @@
     "title": "Google Earth Engine",
     "section": "Personal Reflection",
     "text": "Personal Reflection\nThis week I have learned a very useful online platform - Google Earth Engine (GEE). I think the most helpful point of GEE is the convenience of obtaining data because we only need a small amount of code to use the online data, instead of going to different websites (e.g. Landsat, Sentinel) to download data and load it into the software again. In addition, the online operation makes it less storage or space requirements for our computers. Through reading papers, I also known that GEE platform can also be used to support model building.\nIn the later learning and research, I think GEE will be the most strong tool for me. But the biggest difficulty for me at the moment is that I have not used the Javascript language, resulting in I can’t understand some codes. Therefore, I will focus on learning the basic programming language in the next step of learning to support the subsequent use."
+  },
+  {
+    "objectID": "WEEK6.html#application",
+    "href": "WEEK6.html#application",
+    "title": "Classification",
+    "section": "Application",
+    "text": "Application"
   }
 ]

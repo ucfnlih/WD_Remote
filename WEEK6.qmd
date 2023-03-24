@@ -51,7 +51,19 @@ So far, a new question will be raised: **how do we apply the machine learning to
 
 ![Two types of SVM](SVM.png){width="60%"}
 :::
-
 </center>
 
 Sources: [Sisodia et al., 2014](https://ieeexplore.ieee.org/document/6909319);[Sheykhmousa et al., 2020](https://ieeexplore.ieee.org/document/9206124)
+
+
+## Application
+
+
+
+
+
+
+
+
+
+
