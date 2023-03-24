@@ -1,4 +1,4 @@
-# Getting star with remote sensing
+# Getting start with remote sensing
 
 This week, we have a preliminary understanding of the concept of remote sensing and how it is implemented. This is the basis for starting out interesting journey of remote sensing!
 
