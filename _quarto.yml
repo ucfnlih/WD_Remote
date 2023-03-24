@@ -16,6 +16,7 @@ book:
     - WEEK6.qmd
     - W7.qmd
     - W8.qmd
+    - Reference1.qmd
 
   repo-url: https://github.com/ucfnlih/WD_Remote.git
   downloads: [pdf, epub]

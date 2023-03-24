@@ -1,6 +1,6 @@
 # A Small Presentation Of LiDAR
 
-## slides
+This week we focus on Xaringan and Quarto. The following small presentation is the practical of using Xaringan. The presentation is about LiDAR, and the summary, application and my personal reflection have been included. [Link](https://ucfnlih.github.io/WEEK2_LiDAR/)
 
 ```{r, echo = FALSE, out.width='40%'}
 xaringanExtra::embed_xaringan(

@@ -1,0 +1,35 @@
+---
+title: "Reference"
+---
+
+Chuvieco, E., Congalton, R.G., 1989. Application of remote sensing and geographic information systems to forest fire hazard mapping. Remote Sensing of Environment 29, 147–159. https://doi.org/10.1016/0034-4257(89)90023-0、
+
+Crommelinck, S., Bennett, R., Gerke, M., Nex, F., Yang, M.Y., Vosselman, G., 2016. Review of Automatic Feature Extraction from High-Resolution Optical Sensor Data for UAV-Based Cadastral Mapping. Remote Sensing 8, 689. https://doi.org/10.3390/rs8080689
+
+Duro, D.C., Franklin, S.E., Dubé, M.G., 2012. A comparison of pixel-based and object-based image analysis with selected machine learning algorithms for the classification of agricultural landscapes using SPOT-5 HRG imagery. Remote Sensing of Environment 118, 259–272. https://doi.org/10.1016/j.rse.2011.11.020
+
+Giuliani, G., Petri, E., Interwies, E., Vysna, V., Guigoz, Y., Ray, N., Dickie, I., 2021. Modelling Accessibility to Urban Green Areas Using Open Earth Observations Data: A Novel Approach to Support the Urban SDG in Four European Cities. Remote Sensing 13, 422. https://doi.org/10.3390/rs13030422
+
+Guo, Z., Shao, X., Xu, Y., Miyazaki, H., Ohira, W., Shibasaki, R., 2016. Identification of Village Building via Google Earth Images and Supervised Machine Learning Methods. Remote Sensing 8, 271. https://doi.org/10.3390/rs8040271
+
+Hämmerle, M., Höfle, B., 2014. Effects of Reduced Terrestrial LiDAR Point Density on High-Resolution Grain Crop Surface Models in Precision Agriculture. Sensors 14, 24212–24230. https://doi.org/10.3390/s141224212
+
+Hutabarat, D., Rivai, M., Purwanto, D., Hutomo, H., 2019. Lidar-based Obstacle Avoidance for the Autonomous Mobile Robot, in: 2019 12th International Conference on Information & Communication Technology and System (ICTS). Presented at the 2019 12th International Conference on Information & Communication Technology and System (ICTS), pp. 197–202. https://doi.org/10.1109/ICTS.2019.8850952
+
+Li, B., Ti, C., Zhao, Y., Yan, X., 2016. Estimating Soil Moisture with Landsat Data and Its Application in Extracting the Spatial Distribution of Winter Flooded Paddies. Remote Sensing 8, 38. https://doi.org/10.3390/rs8010038
+
+Rigol, J.P., Chica-Olmo, M., 1998. Merging remote-sensing images for geological-environmental mapping: application to the Cabo de Gata-Níjar Natural Park, Spain. Environmental Geology 34, 194–202. https://doi.org/10.1007/s002540050271
+
+Rocchini, D., Di Rita, A., 2005. Relief effects on aerial photos geometric correction. Applied Geography 25, 159–168. https://doi.org/10.1016/j.apgeog.2005.03.002
+
+Salman Mahiny, A., Turner, B., 2007. A Comparison of Four Common Atmospheric Correction Methods. Photogrammetric Engineering & Remote Sensing 73, 361–368. https://doi.org/10.14358/PERS.73.4.361
+
+Sheykhmousa, M., Mahdianpari, M., Ghanbari, H., Mohammadimanesh, F., Ghamisi, P., Homayouni, S., 2020. Support Vector Machine Versus Random Forest for Remote Sensing Image Classification: A Meta-Analysis and Systematic Review. IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing 13, 6308–6325. https://doi.org/10.1109/JSTARS.2020.3026724
+
+Sisodia, P.S., Tiwari, V., Kumar, A., 2014a. Analysis of Supervised Maximum Likelihood Classification for remote sensing image, in: International Conference on Recent Advances and Innovations in Engineering (ICRAIE-2014). Presented at the International Conference on Recent Advances and Innovations in Engineering (ICRAIE-2014), pp. 1–4. https://doi.org/10.1109/ICRAIE.2014.6909319
+
+Sisodia, P.S., Tiwari, V., Kumar, A., 2014b. Analysis of Supervised Maximum Likelihood Classification for remote sensing image, in: International Conference on Recent Advances and Innovations in Engineering (ICRAIE-2014). Presented at the International Conference on Recent Advances and Innovations in Engineering (ICRAIE-2014), pp. 1–4. https://doi.org/10.1109/ICRAIE.2014.6909319
+
+Sulova, A., Jokar Arsanjani, J., 2021. Exploratory Analysis of Driving Force of Wildfires in Australia: An Application of Machine Learning within Google Earth Engine. Remote Sensing 13, 10. https://doi.org/10.3390/rs13010010
+
+Tonina, D., McKean, J.A., Benjankar, R.M., Wright, C.W., Goode, J.R., Chen, Q., Reeder, W.J., Carmichael, R.A., Edmondson, M.R., 2019. Mapping river bathymetries: Evaluating topobathymetric LiDAR survey. Earth Surface Processes and Landforms 44, 507–520. https://doi.org/10.1002/esp.4513
